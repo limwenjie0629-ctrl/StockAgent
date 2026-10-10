@@ -102,7 +102,7 @@ def create_admin_user(client):
                 "last_login": None,
                 "profile": {
                     "display_name": "系统管理员",
-                    "bio": "TradingAgents-CN 系统管理员",
+                    "bio": "StockAgent 系统管理员",
                     "avatar_url": None
                 },
                 "preferences": {
@@ -201,7 +201,7 @@ def create_admin_password_config():
 
 def main():
     """主函数"""
-    print("🔧 TradingAgents-CN 容器内快速初始化")
+    print("🔧 StockAgent 容器内快速初始化")
     print("=" * 50)
     
     # 检查是否在容器内

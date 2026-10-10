@@ -2,7 +2,7 @@
 
 ## 📋 概述
 
-DeepSeek V3 是TradingAgents-CN v0.1.7新集成的成本优化AI模型，专为中文金融场景设计。相比GPT-4，DeepSeek V3在保持优秀分析质量的同时，成本降低90%以上，是进行股票分析的理想选择。
+DeepSeek V3 是StockAgent v0.1.7新集成的成本优化AI模型，专为中文金融场景设计。相比GPT-4，DeepSeek V3在保持优秀分析质量的同时，成本降低90%以上，是进行股票分析的理想选择。
 
 ## 🎯 DeepSeek V3 特色
 
@@ -309,7 +309,7 @@ DEEPSEEK_CONCURRENT_REQUESTS=3  # 并发请求数
 - 超时: 网络问题 → 检查网络连接
 
 # 调试方法:
-docker logs TradingAgents-web | grep deepseek
+docker logs StockAgent-web | grep deepseek
 ```
 
 #### 3. 分析质量问题
@@ -403,10 +403,10 @@ results = asyncio.run(batch_analysis(symbols))
 - 📚 [DeepSeek文档](https://platform.deepseek.com/docs)
 - 💬 [DeepSeek社区](https://github.com/deepseek-ai)
 
-### TradingAgents-CN支持
-- 🐛 [GitHub Issues](https://github.com/hsliuping/TradingAgents-CN/issues)
-- 💬 [GitHub Discussions](https://github.com/hsliuping/TradingAgents-CN/discussions)
-- 📚 [完整文档](https://github.com/hsliuping/TradingAgents-CN/tree/main/docs)
+### StockAgent支持
+- 🐛 [GitHub Issues](https://github.com/hsliuping/StockAgent/issues)
+- 💬 [GitHub Discussions](https://github.com/hsliuping/StockAgent/discussions)
+- 📚 [完整文档](https://github.com/hsliuping/StockAgent/tree/main/docs)
 
 ---
 

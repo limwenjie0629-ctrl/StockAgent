@@ -2,7 +2,7 @@
 
 ## 🎯 功能概述
 
-TradingAgents-CN 提供了强大的报告导出功能，支持将股票分析结果导出为多种专业格式，方便用户保存、分享和进一步分析。
+StockAgent 提供了强大的报告导出功能，支持将股票分析结果导出为多种专业格式，方便用户保存、分享和进一步分析。
 
 ## 📋 支持的导出格式
 
@@ -197,18 +197,18 @@ EXPORT_WATERMARK=false                 # 是否添加水印
 1. **查看详细日志**
 
    ```bash
-   docker logs TradingAgents-web --follow
+   docker logs StockAgent-web --follow
    ```
 2. **测试转换功能**
 
    ```bash
-   docker exec TradingAgents-web python test_conversion.py
+   docker exec StockAgent-web python test_conversion.py
    ```
 3. **检查依赖**
 
    ```bash
-   docker exec TradingAgents-web pandoc --version
-   docker exec TradingAgents-web wkhtmltopdf --version
+   docker exec StockAgent-web pandoc --version
+   docker exec StockAgent-web wkhtmltopdf --version
    ```
 
 ## 🎯 最佳实践
@@ -267,7 +267,7 @@ EXPORT_WATERMARK=false                 # 是否添加水印
 - 🛠️ 错误处理和降级策略设计
 - 🧪 完整的测试和验证流程
 
-感谢他的杰出贡献，让TradingAgents-CN拥有了专业级的报告导出能力！
+感谢他的杰出贡献，让StockAgent拥有了专业级的报告导出能力！
 
 ---
 

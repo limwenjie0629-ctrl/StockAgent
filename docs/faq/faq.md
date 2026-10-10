@@ -2,7 +2,7 @@
 
 ## 概述
 
-本文档收集了用户在使用 TradingAgents 框架时最常遇到的问题和解答，帮助您快速解决常见问题。
+本文档收集了用户在使用 StockAgent 框架时最常遇到的问题和解答，帮助您快速解决常见问题。
 
 ## 🚀 安装和配置
 
@@ -81,7 +81,7 @@ except Exception as e:
 
 ### Q3: 支持哪些 Python 版本？
 
-**A:** TradingAgents 支持 Python 3.10, 3.11, 和 3.12。推荐使用 Python 3.11 以获得最佳性能和兼容性。
+**A:** StockAgent 支持 Python 3.10, 3.11, 和 3.12。推荐使用 Python 3.11 以获得最佳性能和兼容性。
 
 ```bash
 # 检查 Python 版本
@@ -94,7 +94,7 @@ pyenv global 3.11.7
 
 ## 💰 成本和使用
 
-### Q4: 使用 TradingAgents 的成本是多少？
+### Q4: 使用 StockAgent 的成本是多少？
 
 **A:** 成本主要来自 LLM API 调用：
 
@@ -449,7 +449,7 @@ ta = TradingAgentsGraph(debug=True, config=config)
 **A:** 多种获取帮助的渠道：
 
 1. **官方文档**: [docs/README.md](../README.md)
-2. **GitHub Issues**: [提交问题](https://github.com/TauricResearch/TradingAgents/issues)
+2. **GitHub Issues**: [提交问题](https://github.com/TauricResearch/StockAgent/issues)
 3. **Discord 社区**: [加入讨论](https://discord.com/invite/hk9PGKShPK)
 4. **邮箱支持**: support@tauric.ai
 
@@ -474,7 +474,7 @@ ta = TradingAgentsGraph(debug=True, config=config)
 
 ## 环境信息
 - Python 版本:
-- TradingAgents 版本:
+- StockAgent 版本:
 - 操作系统:
 - 相关依赖版本:
 

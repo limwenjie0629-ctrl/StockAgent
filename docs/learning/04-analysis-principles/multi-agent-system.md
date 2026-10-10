@@ -9,7 +9,7 @@
 
 ## 📋 引言
 
-TradingAgents-CN采用多智能体协作机制进行股票分析。什么是多智能体系统？为什么要使用多个AI而不是一个？本文将深入解析多智能体系统的原理和优势。
+StockAgent采用多智能体协作机制进行股票分析。什么是多智能体系统？为什么要使用多个AI而不是一个？本文将深入解析多智能体系统的原理和优势。
 
 ---
 
@@ -43,7 +43,7 @@ TradingAgents-CN采用多智能体协作机制进行股票分析。什么是多�
 
 ---
 
-## 🏗️ TradingAgents-CN的智能体架构
+## 🏗️ StockAgent的智能体架构
 
 ### 智能体角色
 
@@ -411,7 +411,7 @@ class MultiAgentSystem:
 ### 核心要点
 
 1. **多智能体系统**由多个专业AI协作完成任务
-2. **TradingAgents-CN**包含5个核心智能体角色
+2. **StockAgent**包含5个核心智能体角色
 3. **协作流程**：收集→分析→评估→决策
 4. **主要优势**：专业分工、多角度、互相制衡
 5. **辩论机制**提高分析的准确性和可靠性
@@ -429,6 +429,6 @@ class MultiAgentSystem:
 
 - 📖 [辩论机制详解](./debate-mechanism.md)
 - 📖 [分析流程详解](./analysis-workflow.md)
-- 📖 [TradingAgents项目介绍](../06-resources/tradingagents-intro.md)
+- 📖 [TradingAgents项目介绍](../06-resources/stockagent-intro.md)
 - 📖 [实战教程](../07-tutorials/single-analysis.md)
 

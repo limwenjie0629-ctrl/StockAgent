@@ -2,7 +2,7 @@
 
 ## 📋 实施概述
 
-已成功实现配置迁移功能，让 TradingAgents 核心库使用统一配置系统中的配置，而不再依赖 `.env` 文件。
+已成功实现配置迁移功能，让 StockAgent 核心库使用统一配置系统中的配置，而不再依赖 `.env` 文件。
 
 ## ✅ 已完成的工作
 
@@ -124,7 +124,7 @@ export const reloadConfig = (): Promise<ApiResponse> => {
   ↓
 后端 API 读取 ✅
   ↓
-❌ TradingAgents 仍从 .env 读取
+❌ StockAgent 仍从 .env 读取
   ↓
 ❌ 用户配置不生效
 ```
@@ -138,7 +138,7 @@ export const reloadConfig = (): Promise<ApiResponse> => {
   ↓
 后端启动时桥接到环境变量 ✅
   ↓
-TradingAgents 从环境变量读取 ✅
+StockAgent 从环境变量读取 ✅
   ↓
 ✅ 用户配置生效！
 ```
@@ -161,7 +161,7 @@ TradingAgents 从环境变量读取 ✅
   ↓
 后端自动桥接到环境变量
   ↓
-TradingAgents 使用桥接的配置
+StockAgent 使用桥接的配置
   ↓
 ✅ 分析正常执行
 ```
@@ -182,7 +182,7 @@ TradingAgents 使用桥接的配置
   ↓
 后端重新桥接到环境变量
   ↓
-TradingAgents 使用新配置
+StockAgent 使用新配置
   ↓
 ✅ 无需重启服务
 ```
@@ -229,7 +229,7 @@ TradingAgents 使用新配置
 
 **支持的数据源**：`TUSHARE`, `AKSHARE`, `FINNHUB`, `TDX`
 
-### 5. TradingAgents 运行时配置 ⭐ 新增
+### 5. StockAgent 运行时配置 ⭐ 新增
 
 | 环境变量 | 说明 | 默认值 | 来源 |
 |---------|------|--------|------|
@@ -337,8 +337,8 @@ TradingAgents 使用新配置
 
 ### 长期优化
 
-1. **完全迁移 TradingAgents**
-   - 修改 TradingAgents 核心库直接使用统一配置
+1. **完全迁移 StockAgent**
+   - 修改 StockAgent 核心库直接使用统一配置
    - 移除环境变量依赖
 
 2. **配置版本管理**
@@ -361,7 +361,7 @@ TradingAgents 使用新配置
 
 通过环境变量桥接方案，我们成功实现了：
 
-1. ✅ **用户配置生效**：配置向导和配置管理中的配置被 TradingAgents 使用
+1. ✅ **用户配置生效**：配置向导和配置管理中的配置被 StockAgent 使用
 2. ✅ **热重载支持**：配置更新后无需重启服务
 3. ✅ **向后兼容**：不破坏现有的环境变量配置方式
 4. ✅ **最小改动**：只需在启动时添加几行代码

@@ -2,14 +2,14 @@
 
 ## 📋 概述
 
-本文档说明如何测试配置迁移功能，验证用户在配置向导或配置管理中设置的配置是否被 TradingAgents 核心库正确使用。
+本文档说明如何测试配置迁移功能，验证用户在配置向导或配置管理中设置的配置是否被 StockAgent 核心库正确使用。
 
 ## 🎯 测试目标
 
 验证以下功能：
 
-1. ✅ 配置向导设置的 API 密钥被 TradingAgents 使用
-2. ✅ 配置管理添加的模型被 TradingAgents 使用
+1. ✅ 配置向导设置的 API 密钥被 StockAgent 使用
+2. ✅ 配置管理添加的模型被 StockAgent 使用
 3. ✅ 配置更新后可以热重载（无需重启）
 4. ✅ 环境变量桥接正常工作
 5. ✅ 配置优先级正确（统一配置 > 环境变量）
@@ -52,7 +52,7 @@ FINNHUB_API_KEY
 {SOURCE}_CACHE_TTL            # 缓存 TTL
 {SOURCE}_CACHE_ENABLED        # 是否启用缓存
 
-# TradingAgents 运行时配置
+# StockAgent 运行时配置
 TA_HK_MIN_REQUEST_INTERVAL_SECONDS
 TA_HK_TIMEOUT_SECONDS
 TA_HK_MAX_RETRIES
@@ -353,7 +353,7 @@ print(f"TRADINGAGENTS_DEFAULT_MODEL: {os.environ.get('TRADINGAGENTS_DEFAULT_MODE
 grep "桥接" app.log
 ```
 
-### 3. 检查 TradingAgents 使用的配置
+### 3. 检查 StockAgent 使用的配置
 
 在 `tradingagents/graph/trading_graph.py` 中添加日志：
 

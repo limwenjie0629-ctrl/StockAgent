@@ -236,7 +236,7 @@ def check_advanced_settings_coverage():
 def main():
     """主函数"""
     print("=" * 60)
-    print("🔍 TradingAgents 配置覆盖率检查")
+    print("🔍 StockAgent 配置覆盖率检查")
     print("=" * 60)
     
     # 检查各项覆盖率

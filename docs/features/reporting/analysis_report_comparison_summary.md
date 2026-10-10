@@ -1,8 +1,8 @@
-# TradingAgents vs TradingAgents-CN 分析报告对比总结
+# StockAgent vs StockAgent 分析报告对比总结
 
 ## 📋 执行摘要
 
-**结论**: ✅ TradingAgents-CN 的分析报告功能**已完整实现**，与原版 TradingAgents 保持一致，并在某些方面有所改进。
+**结论**: ✅ StockAgent 的分析报告功能**已完整实现**，与原版 StockAgent 保持一致，并在某些方面有所改进。
 
 **不需要任何修复或补充！**
 
@@ -39,7 +39,7 @@
 
 ## 🎯 实现细节对比
 
-### 原版 TradingAgents (CLI)
+### 原版 StockAgent (CLI)
 
 #### 报告定义
 **文件**: `cli/main.py` 第178-186行
@@ -63,7 +63,7 @@ self.report_sections = {
 - 动态从 `risk_debate_state` 提取 `risky_history`, `safe_history`, `neutral_history`, `judge_decision`
 - 在CLI界面实时展示，不保存独立的 debate state 文件
 
-### TradingAgents-CN (Web)
+### StockAgent (Web)
 
 #### 报告定义
 **文件**: `web/utils/report_exporter.py` 第675-722行
@@ -308,7 +308,7 @@ def _add_team_decision_reports(self, md_content: str, state: Dict[str, Any]) -> 
 
 ## 🎉 最终结论
 
-**TradingAgents-CN 的分析报告功能完全达标，甚至超越原版！**
+**StockAgent 的分析报告功能完全达标，甚至超越原版！**
 
 ### 核心优势
 1. ✅ **功能完整**: 所有13个报告模块全部实现

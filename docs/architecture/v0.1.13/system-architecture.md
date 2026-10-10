@@ -1,8 +1,8 @@
-# TradingAgents 系统架构
+# StockAgent 系统架构
 
 ## 概述
 
-TradingAgents 是一个基于多智能体协作的金融交易决策框架，采用 LangGraph 构建智能体工作流，支持中国A股、港股和美股的全面分析。系统通过模块化设计实现高度可扩展性和可维护性。
+StockAgent 是一个基于多智能体协作的金融交易决策框架，采用 LangGraph 构建智能体工作流，支持中国A股、港股和美股的全面分析。系统通过模块化设计实现高度可扩展性和可维护性。
 
 ## 🏗️ 系统架构设计
 
@@ -556,7 +556,7 @@ import os
 DEFAULT_CONFIG = {
     "project_dir": os.path.abspath(os.path.join(os.path.dirname(__file__), ".")),
     "results_dir": os.getenv("TRADINGAGENTS_RESULTS_DIR", "./results"),
-    "data_dir": os.path.join(os.path.expanduser("~"), "Documents", "TradingAgents", "data"),
+    "data_dir": os.path.join(os.path.expanduser("~"), "Documents", "StockAgent", "data"),
     "data_cache_dir": os.path.join(
         os.path.abspath(os.path.join(os.path.dirname(__file__), ".")),
         "dataflows/data_cache",
@@ -857,4 +857,4 @@ if config["llm_provider"] == "custom":
 - 连接池管理
 - 垃圾回收优化
 
-TradingAgents 系统架构通过模块化设计、智能体协作和多源数据融合，为复杂的金融决策提供了强大、可扩展和高性能的技术基础。系统支持多种LLM提供商、数据源和部署方式，能够适应不同的使用场景和性能要求。
+StockAgent 系统架构通过模块化设计、智能体协作和多源数据融合，为复杂的金融决策提供了强大、可扩展和高性能的技术基础。系统支持多种LLM提供商、数据源和部署方式，能够适应不同的使用场景和性能要求。

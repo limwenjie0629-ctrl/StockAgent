@@ -242,7 +242,7 @@ def display_pricing_info():
 
 def main():
     """主演示函数"""
-    logger.info(f"🎯 TradingAgents Token使用统计和成本跟踪演示")
+    logger.info(f"🎯 StockAgent Token使用统计和成本跟踪演示")
     logger.info(f"本演示将展示完整的Token统计和成本跟踪功能")
     
     # 1. 显示配置状态

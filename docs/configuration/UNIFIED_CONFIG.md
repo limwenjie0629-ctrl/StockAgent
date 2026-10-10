@@ -36,7 +36,7 @@
 
 ### ✅ 向后兼容
 - 保持现有 `config/*.json` 文件格式不变
-- 支持现有 TradingAgents 配置系统
+- 支持现有 StockAgent 配置系统
 - 无需修改现有代码即可使用
 
 ### ✅ 统一接口
@@ -81,7 +81,7 @@
   - `finnhub_api_key` → 数据源配置
 
 
-### TradingAgents 数据来源策略（App 缓存优先开关）
+### StockAgent 数据来源策略（App 缓存优先开关）
 - 键：`ta_use_app_cache`（系统设置）；ENV 覆盖：`TA_USE_APP_CACHE`
 - 默认：`false`
 - 语义：
@@ -90,7 +90,7 @@
 - 缓存集合（固定名）：
   - 基础信息：`stock_basic_info`
   - 行情快照：`market_quotes`
-- 适用范围：TradingAgents 内部数据获取（基础信息、近实时行情）
+- 适用范围：StockAgent 内部数据获取（基础信息、近实时行情）
 - 优先级：DB(system_settings) > ENV > 默认
 
 ### 数据源配置

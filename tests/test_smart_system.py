@@ -230,7 +230,7 @@ def generate_test_report(results):
 
 def main():
     """主测试函数"""
-    print("🚀 TradingAgents 智能系统完整测试")
+    print("🚀 StockAgent 智能系统完整测试")
     print("=" * 50)
     print(f"测试时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     

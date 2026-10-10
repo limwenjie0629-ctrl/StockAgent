@@ -18,7 +18,7 @@ from app.core.config import settings
 
 def main():
     """生产环境启动函数"""
-    print("🚀 Starting TradingAgents-CN Backend (Production Mode)")
+    print("🚀 Starting StockAgent Backend (Production Mode)")
     print(f"📍 Host: {settings.HOST}")
     print(f"🔌 Port: {settings.PORT}")
     print("🔒 Production Mode: Enabled")

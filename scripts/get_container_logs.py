@@ -173,7 +173,7 @@ def get_docker_logs(container_name):
 
 def main():
     """主函数"""
-    print("🚀 TradingAgents Docker容器日志获取工具")
+    print("🚀 StockAgent Docker容器日志获取工具")
     print("=" * 60)
     
     # 1. 查找容器

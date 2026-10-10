@@ -150,7 +150,7 @@ def analyze_upstream_contribution():
     
     # 询问是否删除
     logger.info(f"\n💡 upstream_contribution目录用途:")
-    logger.info(f"   - 准备向上游项目(TauricResearch/TradingAgents)贡献代码")
+    logger.info(f"   - 准备向上游项目(TauricResearch/StockAgent)贡献代码")
     logger.info(f"   - 包含移除中文内容的版本")
     logger.info(f"   - 如果不计划向上游贡献，可以删除")
     
@@ -158,7 +158,7 @@ def analyze_upstream_contribution():
 
 def main():
     """主函数"""
-    logger.info(f"🧹 TradingAgents 目录清理工具")
+    logger.info(f"🧹 StockAgent 目录清理工具")
     logger.info(f"=")
     logger.info(f"💡 目标: 清理自动生成的文件和不必要的目录")
     logger.info(f"=")

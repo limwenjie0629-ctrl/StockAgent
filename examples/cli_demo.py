@@ -39,7 +39,7 @@ def run_command(command, description):
 
 def main():
     """主演示函数"""
-    logger.info(f"🚀 TradingAgents CLI 中文化功能演示")
+    logger.info(f"🚀 StockAgent CLI 中文化功能演示")
     logger.info(f"=")
     logger.info(f"本演示将展示CLI工具的各种中文化功能")
     print()

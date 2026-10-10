@@ -1,7 +1,7 @@
 # 学习中心完善与合规定位优化
 
 **日期**: 2025-11-15  
-**作者**: TradingAgents-CN 开发团队  
+**作者**: StockAgent 开发团队  
 **标签**: `学习中心` `合规定位` `文档更新` `前端优化` `分支合并`
 
 ---
@@ -58,15 +58,15 @@
 
 ---
 
-### 3) 品牌与引用一致性（FinRobot → TradingAgents）
+### 3) 品牌与引用一致性（FinRobot → StockAgent）
 
-为保持一致性与清晰性，统一将历史文档中的 FinRobot 引用替换为 TradingAgents。
+为保持一致性与清晰性，统一将历史文档中的 FinRobot 引用替换为 StockAgent。
 
 **相关提交**：
-- `72a8ccb` - refactor: 重命名 finrobot-intro.md 为 tradingagents-intro.md
-- `0bc0401` - fix: 更新所有学习文档中的 FinRobot 引用为 TradingAgents
-- `640eca7` - fix: 更新论文解读文章标题为 TradingAgents
-- `8dcda00` - fix: 更正源项目信息，从 FinRobot 改为 TradingAgents
+- `72a8ccb` - refactor: 重命名 finrobot-intro.md 为 stockagent-intro.md
+- `0bc0401` - fix: 更新所有学习文档中的 FinRobot 引用为 StockAgent
+- `640eca7` - fix: 更新论文解读文章标题为 StockAgent
+- `8dcda00` - fix: 更正源项目信息，从 FinRobot 改为 StockAgent
 
 ---
 
@@ -130,10 +130,10 @@
 - `36ff36c` | Merge PR #457: GLM news analyst fixes & OpenAI-compatible adapters
 - `6151fbd` | feat(learning): 学习中心文档与前端更新（含暗色主题细节）
 - `b7d89a1` | docs(faq): DeepSeek/Qwen 聚焦与示例、API Key 获取更新
-- `72a8ccb` | refactor: 重命名 finrobot-intro.md 为 tradingagents-intro.md
-- `0bc0401` | fix: 文档中 FinRobot → TradingAgents 引用统一
-- `640eca7` | fix: 论文解读文章标题统一为 TradingAgents
-- `8dcda00` | fix: 源项目信息修正为 TradingAgents
+- `72a8ccb` | refactor: 重命名 finrobot-intro.md 为 stockagent-intro.md
+- `0bc0401` | fix: 文档中 FinRobot → StockAgent 引用统一
+- `640eca7` | fix: 论文解读文章标题统一为 StockAgent
+- `8dcda00` | fix: 源项目信息修正为 StockAgent
 - `2ea6eba` | fix: 学习中心前端页面显示已完成文档
 - `7686caf` | feat: 完成学习中心核心文档编写
 - `08b6482` | feat: 添加学习中心模块

@@ -239,7 +239,7 @@ if __name__ == "__main__":
 
 def main():
     """主函数"""
-    print("🚀 TradingAgents Docker日志修复工具")
+    print("🚀 StockAgent Docker日志修复工具")
     print("=" * 60)
     
     # 1. 修复Docker日志配置
@@ -256,7 +256,7 @@ def main():
     print("\n💡 接下来的步骤:")
     print("1. 重新构建Docker镜像: docker-compose build")
     print("2. 重启容器: docker-compose down && docker-compose up -d")
-    print("3. 测试日志: docker exec TradingAgents-web python test_docker_logging.py")
+    print("3. 测试日志: docker exec StockAgent-web python test_docker_logging.py")
     print("4. 检查日志文件: ls -la logs/")
     print("5. 实时查看: tail -f logs/tradingagents.log")
     

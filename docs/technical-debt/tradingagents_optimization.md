@@ -1,4 +1,4 @@
-# TradingAgents 代码库优化建议清单（初稿）
+# StockAgent 代码库优化建议清单（初稿）
 
 说明
 - 目标：对 `tradingagents/` 目录进行结构化体检，沉淀一份可执行的优化清单，后续作为改进参考。
@@ -32,7 +32,7 @@
 
 - App 缓存优先化开关（ta_use_app_cache）
   - 状态：已实现并合入；默认关闭，可通过系统设置或 ENV(`TA_USE_APP_CACHE`) 开启
-  - 行为：开启后 TradingAgents 优先读 App 缓存（Mongo 集合 `stock_basic_info`/`market_quotes`），未命中回退直连
+  - 行为：开启后 StockAgent 优先读 App 缓存（Mongo 集合 `stock_basic_info`/`market_quotes`），未命中回退直连
   - 测试：新增单测覆盖开启/关闭与命中/回退分支；实时行情优先读 `market_quotes`
   - 后续建议：
     - 增加缓存命中/回退指标与日志字段（cache_hit, fallback_reason）

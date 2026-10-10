@@ -2,7 +2,7 @@
 
 ## 🎯 功能概述
 
-TradingAgents-CN 提供了完整的Docker容器化部署方案，支持一键启动完整的分析环境，包括Web应用、数据库、缓存系统和管理界面。
+StockAgent 提供了完整的Docker容器化部署方案，支持一键启动完整的分析环境，包括Web应用、数据库、缓存系统和管理界面。
 
 ## 🏗️ 架构设计
 
@@ -13,7 +13,7 @@ TradingAgents-CN 提供了完整的Docker容器化部署方案，支持一键启
 │                    Docker Compose                       │
 ├─────────────────────────────────────────────────────────┤
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐     │
-│  │ TradingAgents│  │   MongoDB   │  │    Redis    │     │
+│  │ StockAgent│  │   MongoDB   │  │    Redis    │     │
 │  │     Web     │  │   Database  │  │    Cache    │     │
 │  │  (Streamlit)│  │             │  │             │     │
 │  └─────────────┘  └─────────────┘  └─────────────┘     │
@@ -28,7 +28,7 @@ TradingAgents-CN 提供了完整的Docker容器化部署方案，支持一键启
 
 ### 服务组件
 
-1. **🌐 TradingAgents-Web**
+1. **🌐 StockAgent-Web**
    - Streamlit Web应用
    - 端口: 8501
    - 功能: 股票分析、报告导出
@@ -66,8 +66,8 @@ TradingAgents-CN 提供了完整的Docker容器化部署方案，支持一键启
 
 ```bash
 # 1. 克隆项目
-git clone https://github.com/hsliuping/TradingAgents-CN.git
-cd TradingAgents-CN
+git clone https://github.com/hsliuping/StockAgent.git
+cd StockAgent
 
 # 2. 配置环境变量
 cp .env.example .env
@@ -83,7 +83,7 @@ docker-compose ps
 
 ### 📦 Docker镜像构建说明
 
-**重要提醒**: TradingAgents-CN不提供预构建的Docker镜像，需要本地构建。
+**重要提醒**: StockAgent不提供预构建的Docker镜像，需要本地构建。
 
 #### 构建过程详解
 
@@ -237,13 +237,13 @@ docker-compose up -d
 # 编辑本地文件，容器内立即生效
 
 # 3. 查看日志
-docker logs TradingAgents-web --follow
+docker logs StockAgent-web --follow
 
 # 4. 进入容器调试
-docker exec -it TradingAgents-web bash
+docker exec -it StockAgent-web bash
 
 # 5. 测试功能
-docker exec TradingAgents-web python test_conversion.py
+docker exec StockAgent-web python test_conversion.py
 ```
 
 ## 📊 监控和管理
@@ -255,9 +255,9 @@ docker exec TradingAgents-web python test_conversion.py
 docker-compose ps
 
 # 查看特定服务日志
-docker logs TradingAgents-web
-docker logs TradingAgents-mongodb
-docker logs TradingAgents-redis
+docker logs StockAgent-web
+docker logs StockAgent-mongodb
+docker logs StockAgent-redis
 
 # 查看资源使用情况
 docker stats
@@ -267,13 +267,13 @@ docker stats
 
 ```bash
 # 备份MongoDB数据
-docker exec TradingAgents-mongodb mongodump --out /backup
+docker exec StockAgent-mongodb mongodump --out /backup
 
 # 备份Redis数据
-docker exec TradingAgents-redis redis-cli BGSAVE
+docker exec StockAgent-redis redis-cli BGSAVE
 
 # 清理缓存
-docker exec TradingAgents-redis redis-cli FLUSHALL
+docker exec StockAgent-redis redis-cli FLUSHALL
 ```
 
 ### 服务重启
@@ -315,10 +315,10 @@ docker-compose up -d --build
 3. **数据库连接失败**
    ```bash
    # 检查数据库服务状态
-   docker logs TradingAgents-mongodb
+   docker logs StockAgent-mongodb
    
    # 检查网络连接
-   docker exec TradingAgents-web ping mongodb
+   docker exec StockAgent-web ping mongodb
    ```
 
 ### 性能优化
@@ -393,7 +393,7 @@ Docker容器化功能由社区贡献者 **[@breeze303](https://github.com/breeze
 - 🔧 开发环境Volume映射配置
 - 📚 完整的部署文档和最佳实践
 
-感谢他的杰出贡献，让TradingAgents-CN拥有了专业级的容器化部署能力！
+感谢他的杰出贡献，让StockAgent拥有了专业级的容器化部署能力！
 
 ---
 

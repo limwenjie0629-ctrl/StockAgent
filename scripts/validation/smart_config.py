@@ -265,7 +265,7 @@ def get_cache_backend() -> str:
 
 def main():
     """主函数 - 演示智能配置系统"""
-    logger.info(f"🔧 TradingAgents 智能配置系统")
+    logger.info(f"🔧 StockAgent 智能配置系统")
     logger.info(f"=")
     
     # 创建配置管理器

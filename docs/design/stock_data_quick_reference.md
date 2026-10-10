@@ -1,4 +1,4 @@
-# TradingAgents 股票数据获取方法速查表
+# StockAgent 股票数据获取方法速查表
 
 ## 🚀 快速开始
 

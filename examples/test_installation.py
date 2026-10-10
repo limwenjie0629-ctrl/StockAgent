@@ -271,7 +271,7 @@ class InstallationTester:
         
         if passed_tests == total_tests:
             print("\n🎉 恭喜！安装验证全部通过！")
-            print("   你可以开始使用TradingAgents-CN了！")
+            print("   你可以开始使用StockAgent了！")
             print("   运行: python start_web.py")
         else:
             print("\n⚠️ 安装验证发现问题，请根据上述错误信息进行修复。")

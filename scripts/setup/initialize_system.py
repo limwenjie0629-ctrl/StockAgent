@@ -19,7 +19,7 @@ sys.path.insert(0, str(project_root))
 
 def initialize_system():
     """初始化系统"""
-    logger.info(f"🚀 TradingAgents 系统初始化")
+    logger.info(f"🚀 StockAgent 系统初始化")
     logger.info(f"=")
     
     # 1. 创建配置目录

@@ -12,7 +12,7 @@ from pathlib import Path
 
 def main():
     """启动后端服务"""
-    print("🚀 TradingAgents-CN Backend Launcher")
+    print("🚀 StockAgent Backend Launcher")
     print("=" * 50)
     
     # 确保在项目根目录

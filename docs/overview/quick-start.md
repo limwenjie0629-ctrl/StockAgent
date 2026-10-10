@@ -2,7 +2,7 @@
 
 ## 概述
 
-本指南将帮助您快速上手 TradingAgents 框架，从安装到运行第一个交易分析，只需几分钟时间。
+本指南将帮助您快速上手 StockAgent 框架，从安装到运行第一个交易分析，只需几分钟时间。
 
 ## 🎉 v0.1.7 新特性
 
@@ -65,8 +65,8 @@ TUSHARE_TOKEN=your_tushare_token      # Tushare数据
 ### 1. 克隆项目
 ```bash
 # 克隆中文增强版
-git clone https://github.com/hsliuping/TradingAgents-CN.git
-cd TradingAgents-CN
+git clone https://github.com/hsliuping/StockAgent.git
+cd StockAgent
 ```
 
 ### 2. 创建虚拟环境
@@ -343,7 +343,7 @@ config["online_tools"] = False  # 使用缓存数据而不是实时数据
 
 如果遇到问题，可以：
 - 查看 [常见问题](../faq/faq.md)
-- 访问 [GitHub Issues](https://github.com/TauricResearch/TradingAgents/issues)
+- 访问 [GitHub Issues](https://github.com/TauricResearch/StockAgent/issues)
 - 加入 [Discord 社区](https://discord.com/invite/hk9PGKShPK)
 - 查看 [故障排除指南](../faq/troubleshooting.md)
 

@@ -2,7 +2,7 @@
 
 ## 🎯 概述
 
-本文档提供了TradingAgents-CN导出功能常见问题的详细解决方案，包括Word、PDF、Markdown导出的各种故障排除方法。
+本文档提供了StockAgent导出功能常见问题的详细解决方案，包括Word、PDF、Markdown导出的各种故障排除方法。
 
 ## 📄 Word导出问题
 
@@ -33,7 +33,7 @@ extra_args = ['--from=markdown-yaml_metadata_block']  # 禁用YAML解析
 
 ```bash
 # 测试Word导出
-docker exec TradingAgents-web python test_conversion.py
+docker exec StockAgent-web python test_conversion.py
 ```
 
 ### 问题2: 中文字符显示异常
@@ -75,13 +75,13 @@ docker exec TradingAgents-web python test_conversion.py
 
 ```bash
 # 1. 检查生成的文件
-docker exec TradingAgents-web ls -la /app/test_*.docx
+docker exec StockAgent-web ls -la /app/test_*.docx
 
 # 2. 验证pandoc安装
-docker exec TradingAgents-web pandoc --version
+docker exec StockAgent-web pandoc --version
 
 # 3. 测试基础转换
-docker exec TradingAgents-web python test_conversion.py
+docker exec StockAgent-web python test_conversion.py
 ```
 
 **解决方案**:
@@ -109,8 +109,8 @@ PDF生成失败，最后错误: wkhtmltopdf not found
 
    ```bash
    # 检查PDF引擎安装
-   docker exec TradingAgents-web wkhtmltopdf --version
-   docker exec TradingAgents-web weasyprint --version
+   docker exec StockAgent-web wkhtmltopdf --version
+   docker exec StockAgent-web weasyprint --version
    ```
 2. **本地环境安装**:
 
@@ -201,13 +201,13 @@ with open(file_path, 'w', encoding='utf-8') as f:
 
    ```bash
    # 基础转换测试
-   docker exec TradingAgents-web python test_conversion.py
+   docker exec StockAgent-web python test_conversion.py
 
    # 实际数据转换测试
-   docker exec TradingAgents-web python test_real_conversion.py
+   docker exec StockAgent-web python test_real_conversion.py
 
    # 现有报告转换测试
-   docker exec TradingAgents-web python test_existing_reports.py
+   docker exec StockAgent-web python test_existing_reports.py
    ```
 2. **检查系统状态**:
 
@@ -216,20 +216,20 @@ with open(file_path, 'w', encoding='utf-8') as f:
    docker-compose ps
 
    # 查看日志
-   docker logs TradingAgents-web --tail 50
+   docker logs StockAgent-web --tail 50
 
    # 检查磁盘空间
-   docker exec TradingAgents-web df -h
+   docker exec StockAgent-web df -h
    ```
 3. **验证依赖**:
 
    ```bash
    # 检查Python包
-   docker exec TradingAgents-web pip list | grep -E "(pandoc|docx|pypandoc)"
+   docker exec StockAgent-web pip list | grep -E "(pandoc|docx|pypandoc)"
 
    # 检查系统工具
-   docker exec TradingAgents-web which pandoc
-   docker exec TradingAgents-web which wkhtmltopdf
+   docker exec StockAgent-web which pandoc
+   docker exec StockAgent-web which wkhtmltopdf
    ```
 
 ### 环境重置
@@ -250,7 +250,7 @@ docker build -t tradingagents-cn:latest . --no-cache
 docker-compose up -d
 
 # 5. 验证功能
-docker exec TradingAgents-web python test_conversion.py
+docker exec StockAgent-web python test_conversion.py
 ```
 
 ### 性能优化
@@ -270,8 +270,8 @@ docker exec TradingAgents-web python test_conversion.py
 
    ```bash
    # 清理临时文件
-   docker exec TradingAgents-web find /tmp -name "*.docx" -delete
-   docker exec TradingAgents-web find /tmp -name "*.pdf" -delete
+   docker exec StockAgent-web find /tmp -name "*.docx" -delete
+   docker exec StockAgent-web find /tmp -name "*.pdf" -delete
    ```
 
 ## 📞 获取帮助
@@ -283,20 +283,20 @@ docker exec TradingAgents-web python test_conversion.py
 1. **错误日志**:
 
    ```bash
-   docker logs TradingAgents-web --tail 100 > error.log
+   docker logs StockAgent-web --tail 100 > error.log
    ```
 2. **系统信息**:
 
    ```bash
-   docker exec TradingAgents-web python --version
-   docker exec TradingAgents-web pandoc --version
+   docker exec StockAgent-web python --version
+   docker exec StockAgent-web pandoc --version
    docker --version
    docker-compose --version
    ```
 3. **测试结果**:
 
    ```bash
-   docker exec TradingAgents-web python test_conversion.py > test_result.log 2>&1
+   docker exec StockAgent-web python test_conversion.py > test_result.log 2>&1
    ```
 
 ### 常见解决方案总结
@@ -322,7 +322,7 @@ docker exec TradingAgents-web python test_conversion.py
 2. **监控资源**:
 
    ```bash
-   docker stats TradingAgents-web
+   docker stats StockAgent-web
    ```
 3. **备份配置**:
 

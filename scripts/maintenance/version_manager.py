@@ -168,7 +168,7 @@ class VersionManager:
     def show_info(self):
         """显示版本信息"""
         current_version = self.get_current_version()
-        logger.info(f"📊 TradingAgents 版本信息")
+        logger.info(f"📊 StockAgent 版本信息")
         logger.info(f"当前版本: {current_version}")
         logger.info(f"版本文件: {self.version_file}")
         logger.info(f"更新日志: {self.changelog_file}")
@@ -183,7 +183,7 @@ class VersionManager:
             logger.info(f"Git标签: 无法获取")
 
 def main():
-    parser = argparse.ArgumentParser(description='TradingAgents 版本管理工具')
+    parser = argparse.ArgumentParser(description='StockAgent 版本管理工具')
     subparsers = parser.add_subparsers(dest='command', help='可用命令')
     
     # 显示信息命令

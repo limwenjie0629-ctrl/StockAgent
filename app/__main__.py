@@ -115,7 +115,7 @@ def main():
     import logging
     logger = logging.getLogger("app.startup")
     
-    logger.info("🚀 Starting TradingAgents-CN Backend...")
+    logger.info("🚀 Starting StockAgent Backend...")
     logger.info(f"📍 Host: {settings.HOST}")
     logger.info(f"🔌 Port: {settings.PORT}")
     logger.info(f"🐛 Debug Mode: {settings.DEBUG}")

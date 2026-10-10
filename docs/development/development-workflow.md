@@ -2,7 +2,7 @@
 
 ## 🎯 概述
 
-本文档详细说明 TradingAgents 中文增强版的标准开发工作流程，确保团队协作的一致性和代码质量。
+本文档详细说明 StockAgent 中文增强版的标准开发工作流程，确保团队协作的一致性和代码质量。
 
 ## 🔄 核心工作流程
 
@@ -318,7 +318,7 @@ python -m pytest tests/ -v --cov=tradingagents
 - [上游同步指南](../maintenance/upstream-sync.md)
 
 ### 联系方式
-- **GitHub Issues**: [提交问题](https://github.com/hsliuping/TradingAgents-CN/issues)
+- **GitHub Issues**: [提交问题](https://github.com/hsliuping/StockAgent/issues)
 - **邮箱**: hsliup@163.com
 
 通过遵循这套标准化的开发工作流程，我们可以确保项目的高质量开发和稳定发布。

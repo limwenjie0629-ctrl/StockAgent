@@ -1,7 +1,7 @@
 # 用户偏好设置与财务指标计算优化：TTM 计算、WebSocket 连接、UI 改进
 
 **日期**: 2025-10-26  
-**作者**: TradingAgents-CN 开发团队  
+**作者**: StockAgent 开发团队  
 **标签**: `feature`, `bug-fix`, `optimization`, `ui`, `websocket`, `financial-metrics`
 
 ---
@@ -581,7 +581,7 @@ html.dark {
 
 **功能概述**：
 
-在关于页面添加原项目（TradingAgents）的介绍和致谢：
+在关于页面添加原项目（StockAgent）的介绍和致谢：
 
 ```vue
 <el-card>
@@ -593,11 +593,11 @@ html.dark {
   <el-descriptions :column="1" border>
     <el-descriptions-item label="原项目">
       <el-link href="https://github.com/virattt/trading-agents" target="_blank">
-        TradingAgents by virattt
+        StockAgent by virattt
       </el-link>
     </el-descriptions-item>
     <el-descriptions-item label="说明">
-      本项目基于 TradingAgents 进行中文化和功能增强，感谢原作者的开源贡献！
+      本项目基于 StockAgent 进行中文化和功能增强，感谢原作者的开源贡献！
     </el-descriptions-item>
   </el-descriptions>
 </el-card>
@@ -758,7 +758,7 @@ docker-compose -f docker-compose.hub.nginx.yml up -d
 
 ---
 
-**感谢使用 TradingAgents-CN！** 🚀
+**感谢使用 StockAgent！** 🚀
 
-如有问题或建议，欢迎在 [GitHub Issues](https://github.com/hsliuping/TradingAgents-CN/issues) 中反馈。
+如有问题或建议，欢迎在 [GitHub Issues](https://github.com/hsliuping/StockAgent/issues) 中反馈。
 

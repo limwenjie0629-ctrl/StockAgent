@@ -92,7 +92,7 @@ def test_simple_analysis():
 
 def main():
     """主测试函数"""
-    print("🧪 TradingAgents 功能测试")
+    print("🧪 StockAgent 功能测试")
     print("=" * 50)
     
     # 测试基本导入

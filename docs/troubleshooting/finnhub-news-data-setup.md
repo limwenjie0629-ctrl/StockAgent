@@ -25,7 +25,7 @@
 "data_dir": "/Users/yluo/Documents/Code/ScAI/FR1-data",
 
 # 修复后（跨平台兼容路径）
-"data_dir": os.path.join(os.path.expanduser("~"), "Documents", "TradingAgents", "data"),
+"data_dir": os.path.join(os.path.expanduser("~"), "Documents", "StockAgent", "data"),
 ```
 
 ### 2. 数据目录结构
@@ -33,7 +33,7 @@
 正确的数据目录结构应该是：
 
 ```
-~/Documents/TradingAgents/data/
+~/Documents/StockAgent/data/
 ├── finnhub_data/
 │   ├── news_data/
 │   │   ├── AAPL_data_formatted.json
@@ -155,11 +155,11 @@ export TRADINGAGENTS_DATA_DIR=/your/custom/data/directory
 **解决方案**：
 ```bash
 # Windows（以管理员身份运行）
-mkdir "C:\Users\%USERNAME%\Documents\TradingAgents\data"
+mkdir "C:\Users\%USERNAME%\Documents\StockAgent\data"
 
 # Linux/Mac
-mkdir -p ~/Documents/TradingAgents/data
-chmod 755 ~/Documents/TradingAgents/data
+mkdir -p ~/Documents/StockAgent/data
+chmod 755 ~/Documents/StockAgent/data
 ```
 
 ### Q2: Finnhub API配额限制
@@ -231,4 +231,4 @@ if not os.path.exists(data_path):
 
 **更新日期**：2025-01-02  
 **版本**：v1.0  
-**适用范围**：TradingAgents-CN v0.1.3+
+**适用范围**：StockAgent v0.1.3+

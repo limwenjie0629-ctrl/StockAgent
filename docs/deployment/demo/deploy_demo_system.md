@@ -2,7 +2,7 @@
 
 ## 📋 概述
 
-本文档提供在远程服务器上部署 TradingAgents 演示系统的完整步骤，包括：
+本文档提供在远程服务器上部署 StockAgent 演示系统的完整步骤，包括：
 - ✅ 从 Docker Hub 拉取镜像
 - ✅ 配置环境变量
 - ✅ 启动服务
@@ -52,7 +52,7 @@
 
 ```bash
 # 下载并运行部署脚本
-curl -fsSL https://raw.githubusercontent.com/your-org/TradingAgents-CN/main/scripts/deploy_demo.sh | bash
+curl -fsSL https://raw.githubusercontent.com/your-org/StockAgent/main/scripts/deploy_demo.sh | bash
 ```
 
 ### 手动部署步骤
@@ -140,31 +140,31 @@ docker ps
 
 ```bash
 # 克隆仓库
-git clone https://github.com/your-org/TradingAgents-CN.git
-cd TradingAgents-CN
+git clone https://github.com/your-org/StockAgent.git
+cd StockAgent
 ```
 
 #### 方法 2：只下载部署文件
 
 ```bash
 # 创建项目目录
-mkdir -p TradingAgents-Demo
-cd TradingAgents-Demo
+mkdir -p StockAgent-Demo
+cd StockAgent-Demo
 
 # 创建必要的目录
 mkdir -p install scripts
 
 # 下载 docker-compose 文件
-curl -o docker-compose.hub.yml https://raw.githubusercontent.com/your-org/TradingAgents-CN/main/docker-compose.hub.yml
+curl -o docker-compose.hub.yml https://raw.githubusercontent.com/your-org/StockAgent/main/docker-compose.hub.yml
 
 # 下载环境变量模板
-curl -o .env.example https://raw.githubusercontent.com/your-org/TradingAgents-CN/main/.env.example
+curl -o .env.example https://raw.githubusercontent.com/your-org/StockAgent/main/.env.example
 
 # 下载配置数据
-curl -o install/database_export_config_2025-10-16.json https://raw.githubusercontent.com/your-org/TradingAgents-CN/main/install/database_export_config_2025-10-16.json
+curl -o install/database_export_config_2025-10-16.json https://raw.githubusercontent.com/your-org/StockAgent/main/install/database_export_config_2025-10-16.json
 
 # 下载导入脚本
-curl -o scripts/import_config_and_create_user.py https://raw.githubusercontent.com/your-org/TradingAgents-CN/main/scripts/import_config_and_create_user.py
+curl -o scripts/import_config_and_create_user.py https://raw.githubusercontent.com/your-org/StockAgent/main/scripts/import_config_and_create_user.py
 
 # 复制环境变量文件
 cp .env.example .env
@@ -604,7 +604,7 @@ sudo systemctl restart nginx
 
 ## 🎉 部署完成
 
-恭喜！您已成功部署 TradingAgents 演示系统！
+恭喜！您已成功部署 StockAgent 演示系统！
 
 **登录信息**：
 - 用户名：`admin`

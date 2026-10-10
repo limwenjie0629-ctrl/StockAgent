@@ -9,7 +9,7 @@ from pathlib import Path
 
 def test_basic_system():
     """测试基本系统功能"""
-    print("🔧 TradingAgents 基本系统测试")
+    print("🔧 StockAgent 基本系统测试")
     print("=" * 40)
     
     # 1. 检查配置文件

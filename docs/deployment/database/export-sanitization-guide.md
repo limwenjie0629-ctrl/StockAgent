@@ -100,7 +100,7 @@ curl -X POST "http://localhost:8000/api/system/database/export" \
         "system_settings": {
           "finnhub_api_key": "c1234567890",
           "tushare_token": "abc123xyz...",
-          "app_name": "TradingAgents"
+          "app_name": "StockAgent"
         }
       }
     ],
@@ -144,7 +144,7 @@ curl -X POST "http://localhost:8000/api/system/database/export" \
         "system_settings": {
           "finnhub_api_key": "",
           "tushare_token": "",
-          "app_name": "TradingAgents"
+          "app_name": "StockAgent"
         }
       }
     ],

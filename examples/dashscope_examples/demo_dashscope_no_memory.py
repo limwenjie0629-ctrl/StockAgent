@@ -25,7 +25,7 @@ load_dotenv()
 
 def main():
     """主函数"""
-    logger.info(f"🚀 TradingAgents 演示 - 阿里百炼版本（无记忆）")
+    logger.info(f"🚀 StockAgent 演示 - 阿里百炼版本（无记忆）")
     logger.info(f"=")
     
     # 检查API密钥
@@ -63,7 +63,7 @@ def main():
     print()
     
     try:
-        logger.info(f"🤖 正在初始化 TradingAgents...")
+        logger.info(f"🤖 正在初始化 StockAgent...")
         
         # 临时修改记忆相关的环境变量，避免初始化错误
         original_openai_key = os.environ.get('OPENAI_API_KEY')
@@ -71,7 +71,7 @@ def main():
             os.environ['OPENAI_API_KEY'] = 'dummy_key_for_initialization'
         
         ta = TradingAgentsGraph(debug=True, config=config)
-        logger.info(f"✅ TradingAgents 初始化成功!")
+        logger.info(f"✅ StockAgent 初始化成功!")
         print()
         
         # 分析股票

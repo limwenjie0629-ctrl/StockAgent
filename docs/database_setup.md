@@ -1,4 +1,4 @@
-# TradingAgents 数据库配置指南
+# StockAgent 数据库配置指南
 
 ## 📋 概述
 

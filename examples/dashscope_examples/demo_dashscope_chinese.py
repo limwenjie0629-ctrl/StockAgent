@@ -26,7 +26,7 @@ load_dotenv()
 def analyze_stock_with_chinese_output(stock_symbol="AAPL", analysis_date="2024-05-10"):
     """使用阿里百炼进行中文股票分析"""
     
-    logger.info(f"🚀 TradingAgents 中文股票分析 - 阿里百炼版本")
+    logger.info(f"🚀 StockAgent 中文股票分析 - 阿里百炼版本")
     logger.info(f"=")
     
     # 检查API密钥

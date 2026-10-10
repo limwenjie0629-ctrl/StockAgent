@@ -138,7 +138,7 @@ def get_cache_statistics():
 
 def main():
     """主函数"""
-    logger.info(f"🧹 TradingAgents 缓存清理工具")
+    logger.info(f"🧹 StockAgent 缓存清理工具")
     logger.info(f"=")
     
     import argparse

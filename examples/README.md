@@ -1,6 +1,6 @@
-# TradingAgents 示例程序 - DeepSeek V3 预览版
+# StockAgent 示例程序 - DeepSeek V3 预览版
 
-本目录包含了 TradingAgents 框架的各种示例程序，帮助用户快速上手和理解如何使用不同的LLM提供商。
+本目录包含了 StockAgent 框架的各种示例程序，帮助用户快速上手和理解如何使用不同的LLM提供商。
 
 ## ⚠️ 预览版说明
 

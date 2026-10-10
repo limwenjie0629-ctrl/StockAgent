@@ -1,4 +1,4 @@
-# TradingAgents 目录结构优化分析报告
+# StockAgent 目录结构优化分析报告
 
 ## 📊 当前状态概览
 

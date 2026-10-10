@@ -86,7 +86,7 @@ async def _print_config_summary(logger):
     """显示配置摘要"""
     try:
         logger.info("=" * 70)
-        logger.info("📋 TradingAgents-CN Configuration Summary")
+        logger.info("📋 StockAgent Configuration Summary")
         logger.info("=" * 70)
 
         # .env 文件路径信息
@@ -239,13 +239,13 @@ async def lifespan(app: FastAPI):
     except Exception as e:
         logger.warning(f"⚠️  默认管理员初始化失败（忽略）: {e}")
 
-    #  配置桥接：将统一配置写入环境变量，供 TradingAgents 核心库使用
+    #  配置桥接：将统一配置写入环境变量，供 StockAgent 核心库使用
     try:
         from app.core.config_bridge import bridge_config_to_env
         bridge_config_to_env()
     except Exception as e:
         logger.warning(f"⚠️  配置桥接失败: {e}")
-        logger.warning("⚠️  TradingAgents 将使用 .env 文件中的配置")
+        logger.warning("⚠️  StockAgent 将使用 .env 文件中的配置")
 
     # Apply dynamic settings (log_level, enable_monitoring) from ConfigProvider
     try:
@@ -266,7 +266,7 @@ async def lifespan(app: FastAPI):
     # 显示配置摘要
     await _print_config_summary(logger)
 
-    logger.info("TradingAgents FastAPI backend started")
+    logger.info("StockAgent FastAPI backend started")
 
     # 启动期：若需要在休市时补充上一交易日收盘快照
     if settings.QUOTES_BACKFILL_ON_STARTUP:
@@ -607,12 +607,12 @@ async def lifespan(app: FastAPI):
             logger.warning(f"UserService cleanup error: {e}")
 
         await close_db()
-        logger.info("TradingAgents FastAPI backend stopped")
+        logger.info("StockAgent FastAPI backend stopped")
 
 
 # 创建FastAPI应用
 app = FastAPI(
-    title="TradingAgents-CN API",
+    title="StockAgent API",
     description="股票分析与批量队列系统 API",
     version=get_version(),
     docs_url="/docs" if settings.DEBUG else None,
@@ -745,7 +745,7 @@ async def root():
     """根路径，返回API信息"""
     print("🏠 根路径被访问")
     return {
-        "name": "TradingAgents-CN API",
+        "name": "StockAgent API",
         "version": get_version(),
         "status": "running",
         "docs_url": "/docs" if settings.DEBUG else None

@@ -1,4 +1,4 @@
-# 📋 TradingAgents 节点工具快速参考
+# 📋 StockAgent 节点工具快速参考
 
 ## 🔄 分析流程概览
 
@@ -245,4 +245,4 @@ python web/run_web.py
 
 ---
 
-*快速参考 | TradingAgents v0.1.7 | 更多详情请查看完整文档*
+*快速参考 | StockAgent v0.1.7 | 更多详情请查看完整文档*

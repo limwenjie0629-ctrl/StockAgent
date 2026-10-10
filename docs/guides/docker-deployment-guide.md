@@ -2,7 +2,7 @@
 
 ## 📋 概述
 
-TradingAgents-CN v0.1.7 引入了完整的Docker容器化部署方案，让您可以通过一条命令启动完整的股票分析环境。本指南将详细介绍如何使用Docker部署和管理TradingAgents-CN。
+StockAgent v0.1.7 引入了完整的Docker容器化部署方案，让您可以通过一条命令启动完整的股票分析环境。本指南将详细介绍如何使用Docker部署和管理StockAgent。
 
 ## 🎯 Docker部署优势
 
@@ -87,8 +87,8 @@ docker-compose --version
 
 ```bash
 # 克隆项目
-git clone https://github.com/hsliuping/TradingAgents-CN.git
-cd TradingAgents-CN
+git clone https://github.com/hsliuping/StockAgent.git
+cd StockAgent
 
 # 检查版本
 cat VERSION
@@ -96,7 +96,7 @@ cat VERSION
 
 ### 📦 关于Docker镜像
 
-**重要说明**: TradingAgents-CN目前不提供预构建的Docker镜像，需要在本地构建。
+**重要说明**: StockAgent目前不提供预构建的Docker镜像，需要在本地构建。
 
 #### 为什么需要本地构建？
 
@@ -192,11 +192,11 @@ docker-compose logs -f
 docker-compose ps
 
 # 应该看到以下服务运行中:
-# - TradingAgents-web (Web应用)
-# - TradingAgents-mongodb (数据库)
-# - TradingAgents-redis (缓存)
-# - TradingAgents-mongo-express (数据库管理)
-# - TradingAgents-redis-commander (缓存管理)
+# - StockAgent-web (Web应用)
+# - StockAgent-mongodb (数据库)
+# - StockAgent-redis (缓存)
+# - StockAgent-mongo-express (数据库管理)
+# - StockAgent-redis-commander (缓存管理)
 ```
 
 ### 步骤5: 访问应用
@@ -259,14 +259,14 @@ docker-compose logs -f redis
 
 ```bash
 # 备份数据
-docker exec TradingAgents-mongodb mongodump --out /backup
-docker exec TradingAgents-redis redis-cli BGSAVE
+docker exec StockAgent-mongodb mongodump --out /backup
+docker exec StockAgent-redis redis-cli BGSAVE
 
 # 清理缓存
-docker exec TradingAgents-redis redis-cli FLUSHALL
+docker exec StockAgent-redis redis-cli FLUSHALL
 
 # 查看数据使用情况
-docker exec TradingAgents-mongodb mongo --eval "db.stats()"
+docker exec StockAgent-mongodb mongo --eval "db.stats()"
 ```
 
 ### 更新应用
@@ -325,10 +325,10 @@ docker stats
 **解决方案**:
 ```bash
 # 检查数据库容器状态
-docker logs TradingAgents-mongodb
+docker logs StockAgent-mongodb
 
 # 检查网络连接
-docker exec TradingAgents-web ping mongodb
+docker exec StockAgent-web ping mongodb
 
 # 重启数据库服务
 docker-compose restart mongodb
@@ -341,7 +341,7 @@ docker-compose restart mongodb
 **解决方案**:
 ```bash
 # 检查环境变量
-docker exec TradingAgents-web env | grep API_KEY
+docker exec StockAgent-web env | grep API_KEY
 
 # 重新配置.env文件
 # 重启服务
@@ -373,7 +373,7 @@ docker stats
 docker-compose ps
 
 # 检查特定服务日志
-docker logs TradingAgents-web --tail 50
+docker logs StockAgent-web --tail 50
 
 # 检查系统资源使用
 docker stats --no-stream
@@ -384,7 +384,7 @@ docker stats --no-stream
 ```bash
 # 每周执行一次
 # 1. 备份数据
-docker exec TradingAgents-mongodb mongodump --out /backup/$(date +%Y%m%d)
+docker exec StockAgent-mongodb mongodump --out /backup/$(date +%Y%m%d)
 
 # 2. 清理日志
 docker-compose logs --tail 0 -f > /dev/null
@@ -428,8 +428,8 @@ REDIS_PASSWORD=secure_redis_password
 
 如果在Docker部署过程中遇到问题：
 
-- 🐛 [GitHub Issues](https://github.com/hsliuping/TradingAgents-CN/issues)
-- 💬 [GitHub Discussions](https://github.com/hsliuping/TradingAgents-CN/discussions)
+- 🐛 [GitHub Issues](https://github.com/hsliuping/StockAgent/issues)
+- 💬 [GitHub Discussions](https://github.com/hsliuping/StockAgent/discussions)
 - 📚 [Docker官方文档](https://docs.docker.com/)
 
 ---

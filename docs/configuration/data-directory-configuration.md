@@ -2,7 +2,7 @@
 
 本指南详细说明如何在TradingAgents中配置数据目录路径，解决路径相关问题，并提供多种配置方式。
 
-This guide explains how to configure data directory paths in TradingAgents, resolve path-related issues, and provides multiple configuration methods.
+This guide explains how to configure data directory paths in StockAgent, resolve path-related issues, and provides multiple configuration methods.
 
 ## 概述 | Overview
 
@@ -12,7 +12,7 @@ TradingAgents支持灵活的数据目录配置，允许用户：
 - 使用CLI命令管理
 - 自动创建必要的目录结构
 
-TradingAgents supports flexible data directory configuration, allowing users to:
+StockAgent supports flexible data directory configuration, allowing users to:
 - Customize data storage locations
 - Configure via environment variables
 - Manage through CLI commands
@@ -126,8 +126,8 @@ Configuration priority from high to low:
 
 If no custom configuration is provided, the system uses the following default paths:
 
-- **Windows**: `C:\Users\{username}\Documents\TradingAgents\data`
-- **Linux/macOS**: `~/Documents/TradingAgents/data`
+- **Windows**: `C:\Users\{username}\Documents\StockAgent\data`
+- **Linux/macOS**: `~/Documents/StockAgent/data`
 
 ## 常见问题解决 | Troubleshooting
 

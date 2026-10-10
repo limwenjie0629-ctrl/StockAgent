@@ -2,7 +2,7 @@
 
 ## 📋 概述
 
-增强数据整合功能通过 `TA_USE_APP_CACHE` 配置，让 TradingAgents 分析服务优先使用 MongoDB 中的同步数据，提供更快速、更准确的数据访问。
+增强数据整合功能通过 `TA_USE_APP_CACHE` 配置，让 StockAgent 分析服务优先使用 MongoDB 中的同步数据，提供更快速、更准确的数据访问。
 
 ## 🎯 核心特性
 

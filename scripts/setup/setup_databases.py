@@ -223,7 +223,7 @@ def test_connections():
 
 def main():
     """主函数"""
-    logger.info(f"🚀 TradingAgents 数据库环境设置")
+    logger.info(f"🚀 StockAgent 数据库环境设置")
     logger.info(f"=")
     
     # 检测操作系统

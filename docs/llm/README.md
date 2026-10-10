@@ -1,6 +1,6 @@
 # LLM 集成文档目录
 
-本目录包含了 TradingAgents 项目中大语言模型（LLM）集成的完整文档，帮助开发者理解、测试和扩展LLM功能。
+本目录包含了 StockAgent 项目中大语言模型（LLM）集成的完整文档，帮助开发者理解、测试和扩展LLM功能。
 
 ## 📚 文档结构
 
@@ -161,8 +161,8 @@ tradingagents/
 ## 📞 获取帮助
 
 ### 技术支持
-- **GitHub Issues**: [提交技术问题](https://github.com/hsliuping/TradingAgents-CN/issues)
-- **Discussion**: [参与技术讨论](https://github.com/hsliuping/TradingAgents-CN/discussions)
+- **GitHub Issues**: [提交技术问题](https://github.com/hsliuping/StockAgent/issues)
+- **Discussion**: [参与技术讨论](https://github.com/hsliuping/StockAgent/discussions)
 - **QQ群**: 782124367
 
 ### 文档反馈

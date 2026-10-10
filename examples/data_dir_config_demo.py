@@ -212,7 +212,7 @@ config_manager.set_data_dir("/path/to/your/data/directory")
 
 def main():
     """主演示函数"""
-    logger.info(f"[bold blue]🎯 TradingAgents-CN 数据目录配置演示[/bold blue]")
+    logger.info(f"[bold blue]🎯 StockAgent 数据目录配置演示[/bold blue]")
     logger.info(f"=")
     
     try:

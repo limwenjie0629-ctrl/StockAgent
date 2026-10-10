@@ -151,4 +151,4 @@ def bind_tools(self, tools, **kwargs):
 **文件位置**: `c:\code\TradingAgentsCN\tradingagents\llm_adapters\dashscope_openai_adapter.py`  
 **简化日期**: 2024年当前日期  
 **代码减少**: 326 行 (60% 减少)  
-**维护者**: TradingAgents 团队
+**维护者**: StockAgent 团队

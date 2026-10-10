@@ -160,7 +160,7 @@ def test_compatibility_checker_tool():
         
         print(f"  返回码: {result.returncode}")
         
-        if "🔧 TradingAgents 数据库依赖包兼容性检查" in result.stdout:
+        if "🔧 StockAgent 数据库依赖包兼容性检查" in result.stdout:
             print("  ✅ 兼容性检查工具运行成功")
             
             # 检查是否检测到pickle5问题

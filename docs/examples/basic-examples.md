@@ -2,7 +2,7 @@
 
 ## 概述
 
-本文档提供了 TradingAgents 框架的基本使用示例，帮助您快速上手并了解各种功能的使用方法。
+本文档提供了 StockAgent 框架的基本使用示例，帮助您快速上手并了解各种功能的使用方法。
 
 ## 示例 1: 基本股票分析
 
@@ -440,4 +440,4 @@ state, decision = ta.propagate("AAPL", "2024-01-15")
 save_analysis_result("AAPL", "2024-01-15", state, decision, format="json")
 ```
 
-这些基本示例展示了 TradingAgents 框架的主要功能和使用模式。您可以根据自己的需求修改和扩展这些示例。
+这些基本示例展示了 StockAgent 框架的主要功能和使用模式。您可以根据自己的需求修改和扩展这些示例。

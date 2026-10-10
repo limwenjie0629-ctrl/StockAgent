@@ -1,8 +1,8 @@
-# TradingAgents 股票数据获取方法整理
+# StockAgent 股票数据获取方法整理
 
 ## 📋 概述
 
-本文档整理了 `D:\code\TradingAgents-CN\tradingagents` 目录下所有股票数据获取相关的函数和方法，按照架构层次和数据类型进行分类。
+本文档整理了 `D:\code\StockAgent\tradingagents` 目录下所有股票数据获取相关的函数和方法，按照架构层次和数据类型进行分类。
 
 ## 🏗️ 架构层次
 

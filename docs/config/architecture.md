@@ -126,9 +126,9 @@ P2：扩展
 - sse_batch_max_idle_seconds（默认 600）
   - SSE 批次进度流在无事件情况下的最大空闲时间（秒），超过将结束连接
 
-## 十、TradingAgents 环境参数（可选）
+## 十、StockAgent 环境参数（可选）
 
-TradingAgents 侧部分限速/睡眠参数支持通过后端系统设置统一管理，亦可通过环境变量覆盖；优先级：DB(system_settings) > ENV > 代码默认。
+StockAgent 侧部分限速/睡眠参数支持通过后端系统设置统一管理，亦可通过环境变量覆盖；优先级：DB(system_settings) > ENV > 代码默认。
 
 - TA_HK_MIN_REQUEST_INTERVAL_SECONDS（默认 2.0）
   - 港股数据最小请求间隔；用于 yfinance/AK 数据请求的节流

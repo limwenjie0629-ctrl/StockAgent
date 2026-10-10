@@ -1,6 +1,6 @@
-# TradingAgents 设计文档目录
+# StockAgent 设计文档目录
 
-本目录包含 TradingAgents 项目的核心设计文档，涵盖系统架构、数据模型、API规范等重要设计内容。
+本目录包含 StockAgent 项目的核心设计文档，涵盖系统架构、数据模型、API规范等重要设计内容。
 
 ## 📋 文档索引
 

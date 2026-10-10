@@ -2,7 +2,7 @@
 
 ## 概述
 
-本文档提供了 TradingAgents 框架的高级使用示例，包括自定义智能体开发、复杂策略实现、性能优化和生产环境部署等高级功能。
+本文档提供了 StockAgent 框架的高级使用示例，包括自定义智能体开发、复杂策略实现、性能优化和生产环境部署等高级功能。
 
 ## 示例 1: 自定义分析师智能体
 
@@ -199,7 +199,7 @@ class PortfolioOptimizer:
     def _analyze_single_asset(self, symbol: str, target_date: str) -> Dict:
         """分析单个资产"""
 
-        # 使用 TradingAgents 分析单个资产
+        # 使用 StockAgent 分析单个资产
         ta = TradingAgentsGraph(debug=False, config=self.config)
         state, decision = ta.propagate(symbol, target_date)
 
@@ -497,7 +497,7 @@ class AdvancedBacktester:
             daily_signals = {}
             for symbol in daily_data:
                 try:
-                    # 使用 TradingAgents 生成信号
+                    # 使用 StockAgent 生成信号
                     signal = self._generate_trading_signal(symbol, date, daily_data[symbol])
                     daily_signals[symbol] = signal
                 except Exception as e:
@@ -554,4 +554,4 @@ class AdvancedBacktester:
         }
 ```
 
-这些高级示例展示了 TradingAgents 框架的扩展能力和在复杂金融应用中的使用方法。通过这些示例，您可以构建更加复杂和专业的交易系统。
+这些高级示例展示了 StockAgent 框架的扩展能力和在复杂金融应用中的使用方法。通过这些示例，您可以构建更加复杂和专业的交易系统。

@@ -1,6 +1,6 @@
 # 美股数据源升级计划
 
-> **目标**: 参考原版 TradingAgents 实现，为美股添加 yfinance 和 Alpha Vantage 支持，提高数据准确性
+> **目标**: 参考原版 StockAgent 实现，为美股添加 yfinance 和 Alpha Vantage 支持，提高数据准确性
 
 **创建日期**: 2025-11-10  
 **状态**: 规划中  
@@ -10,7 +10,7 @@
 
 ## 📋 背景
 
-原版 TradingAgents 已经从 Finnhub 切换到 yfinance + Alpha Vantage 的组合：
+原版 StockAgent 已经从 Finnhub 切换到 yfinance + Alpha Vantage 的组合：
 - **yfinance**: 用于股票价格和技术指标数据
 - **Alpha Vantage**: 用于基本面和新闻数据（准确度更高）
 
@@ -344,7 +344,7 @@ class USDataSourceManager:
 # ==================== Alpha Vantage API 配置 ====================
 # Alpha Vantage API Key（用于美股基本面和新闻数据）
 # 获取地址: https://www.alphavantage.co/support/#api-key
-# 免费版: 60 requests/minute, 无每日限制（TradingAgents 用户）
+# 免费版: 60 requests/minute, 无每日限制（StockAgent 用户）
 ALPHA_VANTAGE_API_KEY=your_alpha_vantage_api_key_here
 
 # ==================== 美股数据源配置 ====================
@@ -365,7 +365,7 @@ US_NEWS_DATA=alpha_vantage
 | **技术指标** | ⚠️ 需计算 | ✅ 内置 | ✅ API | yfinance |
 | **基本面数据** | ⚠️ 有限 | ⚠️ 有限 | ✅ 完整 | Alpha Vantage |
 | **新闻数据** | ⚠️ 准确度低 | ❌ 不支持 | ✅ 准确度高 | Alpha Vantage |
-| **免费额度** | 60/min | 无限制 | 60/min (TradingAgents) | - |
+| **免费额度** | 60/min | 无限制 | 60/min (StockAgent) | - |
 | **数据质量** | ⭐⭐⭐ | ⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | - |
 
 ---
@@ -389,7 +389,7 @@ US_NEWS_DATA=alpha_vantage
 1. **API 密钥管理**:
    - Alpha Vantage 需要 API Key
    - 免费版有速率限制（60 requests/minute）
-   - TradingAgents 用户有特殊额度支持
+   - StockAgent 用户有特殊额度支持
 
 2. **向后兼容性**:
    - 保留 Finnhub 作为备用数据源
@@ -410,7 +410,7 @@ US_NEWS_DATA=alpha_vantage
 
 ## 📚 参考资源
 
-- **原版 TradingAgents**: https://github.com/TauricResearch/TradingAgents
+- **原版 StockAgent**: https://github.com/TauricResearch/StockAgent
 - **yfinance 文档**: https://pypi.org/project/yfinance/
 - **Alpha Vantage 文档**: https://www.alphavantage.co/documentation/
 - **Alpha Vantage API Key**: https://www.alphavantage.co/support/#api-key

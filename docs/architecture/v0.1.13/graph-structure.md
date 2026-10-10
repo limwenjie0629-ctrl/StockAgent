@@ -1,8 +1,8 @@
-# TradingAgents 图结构架构
+# StockAgent 图结构架构
 
 ## 概述
 
-TradingAgents 基于 LangGraph 构建了一个复杂的多智能体协作图结构，通过有向无环图（DAG）的方式组织智能体工作流。系统采用状态驱动的图执行模式，支持条件路由、并行处理和动态决策。
+StockAgent 基于 LangGraph 构建了一个复杂的多智能体协作图结构，通过有向无环图（DAG）的方式组织智能体工作流。系统采用状态驱动的图执行模式，支持条件路由、并行处理和动态决策。
 
 ## 🏗️ 图结构设计原理
 
@@ -861,4 +861,4 @@ class DynamicGraphSetup(GraphSetup):
 
 ---
 
-通过这种基于 LangGraph 的图结构设计，TradingAgents 实现了高度灵活和可扩展的多智能体协作框架，为复杂的金融决策提供了强大的技术支撑。
+通过这种基于 LangGraph 的图结构设计，StockAgent 实现了高度灵活和可扩展的多智能体协作框架，为复杂的金融决策提供了强大的技术支撑。

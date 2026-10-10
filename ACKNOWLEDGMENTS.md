@@ -4,7 +4,7 @@
 
 ### [Tauric Research](https://github.com/TauricResearch) 团队
 
-我们向 **Tauric Research** 团队及 **[TradingAgents](https://github.com/TauricResearch/TradingAgents)** 项目的所有贡献者表达最诚挚的敬意和感谢！
+我们向 **Tauric Research** 团队及 **[StockAgent](https://github.com/TauricResearch/StockAgent)** 项目的所有贡献者表达最诚挚的敬意和感谢！
 
 #### 🎯 创新贡献与源码价值
 
@@ -214,5 +214,5 @@
 
 *"站在巨人的肩膀上，我们能看得更远。感谢Tauric Research团队为我们提供了如此坚实的肩膀。"*
 
-**TradingAgents-CN 团队**  
+**StockAgent 团队**  
 2025年6月

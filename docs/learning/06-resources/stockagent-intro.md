@@ -9,7 +9,7 @@
 
 ## 📋 引言
 
-TradingAgents-CN是基于**TradingAgents**项目开发的中文本地化版本。TradingAgents是一个开源的AI驱动的多智能体股票分析平台，由Tauric Research团队开发。本文将介绍TradingAgents项目的背景、核心理念和技术架构。
+StockAgent是基于**StockAgent**项目开发的中文本地化版本。TradingAgents是一个开源的AI驱动的多智能体股票分析平台，由Tauric Research团队开发。本文将介绍TradingAgents项目的背景、核心理念和技术架构。
 
 ---
 
@@ -24,7 +24,7 @@ TradingAgents项目起源于学术研究，旨在探索如何利用大语言模�
 - 多位AI和金融科技领域的专家
 
 **发表论文**：
-- 📄 论文标题：*"TradingAgents: TradingAgents: Multi-Agents LLM Financial Trading
+- 📄 论文标题：*"StockAgent: StockAgent: Multi-Agents LLM Financial Trading
 Framework"*
 - 📅 发表时间：2024年
 - 🔗 论文链接：[arXiv](https://arxiv.org/pdf/2412.20138)
@@ -147,7 +147,7 @@ ANALYST_PROMPT = """
 ### 2. 多市场支持
 
 - 🇺🇸 美股市场
-- 🇨🇳 A股市场（TradingAgents-CN增强）
+- 🇨🇳 A股市场（StockAgent增强）
 - 🇭🇰 港股市场
 
 ### 3. 灵活的部署方式
@@ -159,9 +159,9 @@ ANALYST_PROMPT = """
 
 ---
 
-## 📊 TradingAgents-CN的改进
+## 📊 StockAgent的改进
 
-TradingAgents-CN在TradingAgents的基础上进行了大量本地化改进：
+StockAgent在TradingAgents的基础上进行了大量本地化改进：
 
 ### 1. 中国市场适配
 
@@ -209,8 +209,8 @@ TradingAgents论文提出了一个开源的AI智能体平台，用于股票分�
 
 ### 论文下载
 
-- 📄 [英文原版PDF](../../paper/TradingAgents_paper.pdf)
-- 📄 [中文翻译版](../../paper/TradingAgents_论文中文版.md)
+- 📄 [英文原版PDF](../../paper/StockAgent_paper.pdf)
+- 📄 [中文翻译版](../../paper/StockAgent_论文中文版.md)
 - 📄 [arXiv在线版](https://arxiv.org/pdf/2412.20138)
 - 📄 [论文解读](./paper-guide.md)
 
@@ -220,14 +220,14 @@ TradingAgents论文提出了一个开源的AI智能体平台，用于股票分�
 
 ### 官方资源
 
-- 🌐 [TradingAgents（源项目）](https://github.com/TauricResearch/TradingAgents)
-- 📚 [TradingAgents文档](https://github.com/TauricResearch/TradingAgents)
+- 🌐 [StockAgent（源项目）](https://github.com/TauricResearch/StockAgent)
+- 📚 [TradingAgents文档](https://github.com/TauricResearch/StockAgent)
 
-### TradingAgents-CN资源
+### StockAgent资源
 
-- 🌐 [GitHub仓库](https://github.com/hsliuping/TradingAgents-CN)
+- 🌐 [GitHub仓库](https://github.com/hsliuping/StockAgent)
 - 📚 [中文文档](../../README.md)
-- 💬 [问题反馈](https://github.com/hsliuping/TradingAgents-CN/issues)
+- 💬 [问题反馈](https://github.com/hsliuping/StockAgent/issues)
 
 ### 学习资源
 
@@ -237,7 +237,7 @@ TradingAgents论文提出了一个开源的AI智能体平台，用于股票分�
 
 ## 💡 总结
 
-TradingAgents是一个创新的开源股票分析平台，通过多智能体协作和大语言模型，为股票分析提供了新的解决方案。TradingAgents-CN在此基础上进行了深度本地化，使其更适合中国市场和中文用户。
+TradingAgents是一个创新的开源股票分析平台，通过多智能体协作和大语言模型，为股票分析提供了新的解决方案。StockAgent在此基础上进行了深度本地化，使其更适合中国市场和中文用户。
 
 **核心价值**：
 - 🎯 学术研究与实际应用的结合
@@ -249,13 +249,13 @@ TradingAgents是一个创新的开源股票分析平台，通过多智能体协�
 
 ## ❓ 常见问题
 
-**Q: TradingAgents和TradingAgents-CN有什么区别？**
+**Q: TradingAgents和StockAgent有什么区别？**
 
-A: TradingAgents-CN是TradingAgents的中文本地化版本，增加了对中国市场的支持，优化了用户体验，并提供了更完善的中文文档。
+A: StockAgent是TradingAgents的中文本地化版本，增加了对中国市场的支持，优化了用户体验，并提供了更完善的中文文档。
 
 **Q: 可以商业使用吗？**
 
-A: 可以。TradingAgents和TradingAgents-CN都采用开源许可证，允许商业使用。但请注意遵守相关金融法规。
+A: 可以。TradingAgents和StockAgent都采用开源许可证，允许商业使用。但请注意遵守相关金融法规。
 
 **Q: 如何贡献代码？**
 
@@ -264,7 +264,7 @@ A: 欢迎贡献！请访问GitHub仓库，提交Pull Request或Issue。
 ---
 
 **下一步阅读**：
-- 📖 [论文中文版](../../paper/TradingAgents_论文中文版.md)
+- 📖 [论文中文版](../../paper/StockAgent_论文中文版.md)
 - 📖 [多智能体系统](../04-analysis-principles/multi-agent-system.md)
 - 📖 [快速开始](../07-tutorials/getting-started.md)
 

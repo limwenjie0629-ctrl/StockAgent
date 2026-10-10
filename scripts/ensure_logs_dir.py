@@ -14,7 +14,7 @@ def ensure_logs_directory():
     project_root = Path(__file__).parent
     logs_dir = project_root / "logs"
     
-    print("🚀 TradingAgents 日志目录检查")
+    print("🚀 StockAgent 日志目录检查")
     print("=" * 40)
     print(f"📁 项目根目录: {project_root}")
     print(f"📁 日志目录: {logs_dir}")

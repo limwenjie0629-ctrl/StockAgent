@@ -157,7 +157,7 @@ def provide_recommendations(dashscope_ok, configured_apis, missing_apis):
 
 def main():
     """主函数"""
-    print("🔍 TradingAgents API配置检查工具")
+    print("🔍 StockAgent API配置检查工具")
     print("=" * 60)
     
     # 检查.env文件

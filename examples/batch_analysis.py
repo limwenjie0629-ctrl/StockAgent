@@ -36,7 +36,7 @@ def batch_stock_analysis():
         "ETF": ["SPY", "QQQ", "VTI"]
     }
     
-    logger.info(f"🚀 TradingAgents-CN 批量股票分析")
+    logger.info(f"🚀 StockAgent 批量股票分析")
     logger.info(f"=")
     
     # 检查API密钥
@@ -103,7 +103,7 @@ def generate_summary_report(results, llm):
     detail_filename = f"batch_analysis_detail_{timestamp}.txt"
     
     with open(detail_filename, 'w', encoding='utf-8') as f:
-        f.write("TradingAgents-CN 批量股票分析报告\n")
+        f.write("StockAgent 批量股票分析报告\n")
         f.write("=" * 60 + "\n")
         f.write(f"生成时间: {time.strftime('%Y-%m-%d %H:%M:%S')}\n\n")
         

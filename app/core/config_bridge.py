@@ -298,7 +298,7 @@ def bridge_config_to_env():
 
     except Exception as e:
         logger.error(f"❌ 配置桥接失败: {e}", exc_info=True)
-        logger.warning("⚠️  TradingAgents 将使用 .env 文件中的配置")
+        logger.warning("⚠️  StockAgent 将使用 .env 文件中的配置")
         return False
 
 
@@ -406,7 +406,7 @@ def _bridge_system_settings() -> int:
         logger.debug(f"  📋 获取到 {len(system_settings)} 个系统设置")
         bridged_count = 0
 
-        # TradingAgents 运行时配置
+        # StockAgent 运行时配置
         ta_settings = {
             'ta_hk_min_request_interval_seconds': 'TA_HK_MIN_REQUEST_INTERVAL_SECONDS',
             'ta_hk_timeout_seconds': 'TA_HK_TIMEOUT_SECONDS',
@@ -568,7 +568,7 @@ def clear_bridged_config():
             f'{ds}_CACHE_ENABLED',
         ])
 
-    # 清除 TradingAgents 运行时配置
+    # 清除 StockAgent 运行时配置
     ta_runtime_keys = [
         'TA_HK_MIN_REQUEST_INTERVAL_SECONDS',
         'TA_HK_TIMEOUT_SECONDS',

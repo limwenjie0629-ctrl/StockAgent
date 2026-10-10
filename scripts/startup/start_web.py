@@ -11,7 +11,7 @@ from pathlib import Path
 
 def main():
     """主函数"""
-    print("🚀 TradingAgents-CN Web应用启动器")
+    print("🚀 StockAgent Web应用启动器")
     print("=" * 50)
     
     # 获取项目根目录

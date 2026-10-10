@@ -4,8 +4,8 @@
 >
 > 本仓库并非从零开发，而是基于以下开源项目构建，并在此基础上做了本地化改进：
 >
-> - **上游项目**：[TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) （Apache 2.0）
-> - **中文增强版**：[hsliuping/TradingAgents-CN](https://github.com/hsliuping/TradingAgents-CN)
+> - **上游项目**：[TauricResearch/StockAgent](https://github.com/TauricResearch/StockAgent) （Apache 2.0）
+> - **中文增强版**：[hsliuping/StockAgent](https://github.com/hsliuping/StockAgent)
 >
 
 
@@ -139,7 +139,7 @@
 📋 **详细更新日志**: [CHANGELOG.md](./docs/releases/CHANGELOG.md)
 
 
-- **原项目**: [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents)
+- **原项目**: [TauricResearch/StockAgent](https://github.com/TauricResearch/StockAgent)
 - **文档**: [完整文档目录](docs/)
 
 ## ⚠️ 风险提示

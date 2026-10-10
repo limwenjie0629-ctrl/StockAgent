@@ -19,7 +19,7 @@ from tradingagents.config.config_manager import ConfigManager
 def main():
     """主函数"""
     print("=" * 60)
-    print("📊 测试 TradingAgents MongoDB 存储初始化")
+    print("📊 测试 StockAgent MongoDB 存储初始化")
     print("=" * 60)
 
     try:

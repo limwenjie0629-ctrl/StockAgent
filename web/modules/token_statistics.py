@@ -430,7 +430,7 @@ def export_statistics_data(days: int):
 def main():
     """主函数"""
     st.set_page_config(
-        page_title="Token统计 - TradingAgents",
+        page_title="Token统计 - StockAgent",
         page_icon="💰",
         layout="wide"
     )

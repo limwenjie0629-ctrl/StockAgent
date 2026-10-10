@@ -5,7 +5,7 @@
       <div class="hero-content">
         <div class="hero-text">
           <h1 class="hero-title">
-            TradingAgents-CN
+            StockAgent
             <span class="version-badge">v1.0.1</span>
           </h1>
           <p class="hero-subtitle">
@@ -17,7 +17,7 @@
           </p>
           <div class="hero-acknowledgment">
             <el-icon><Star /></el-icon>
-            <span>基于 <a href="https://github.com/TauricResearch/TradingAgents" target="_blank" rel="noopener noreferrer">TradingAgents</a> 项目开发，感谢原项目的贡献</span>
+            <span>基于 <a href="https://github.com/TauricResearch/StockAgent" target="_blank" rel="noopener noreferrer">StockAgent</a> 项目开发，感谢原项目的贡献</span>
           </div>
           <div class="hero-actions">
             <el-button type="primary" size="large" @click="goToAnalysis">
@@ -260,20 +260,20 @@
               <el-icon><Link /></el-icon>
             </div>
             <div class="origin-info">
-              <h3>TradingAgents</h3>
-              <a href="https://github.com/TauricResearch/TradingAgents"
+              <h3>StockAgent</h3>
+              <a href="https://github.com/TauricResearch/StockAgent"
                  target="_blank"
                  rel="noopener noreferrer"
                  class="origin-link">
                 <el-icon><Link /></el-icon>
-                github.com/TauricResearch/TradingAgents
+                github.com/TauricResearch/StockAgent
               </a>
             </div>
           </div>
 
           <div class="origin-description">
             <p>
-              <strong>TradingAgents-CN</strong> 是基于 <strong>TradingAgents</strong> 项目开发的中文本地化版本。
+              <strong>StockAgent</strong> 是基于 <strong>StockAgent</strong> 项目开发的中文本地化版本。
               原项目由 Tauric Research 团队开发，是一个创新的多智能体股票分析框架。
             </p>
             <p>
@@ -397,7 +397,7 @@
             <el-icon><ChatDotRound /></el-icon>
           </div>
           <h4>微信公众号</h4>
-          <p>TradingAgents-CN</p>
+          <p>StockAgent</p>
           <span class="contact-desc">最新动态和使用教程</span>
         </div>
 
@@ -422,7 +422,7 @@
     <!-- Footer -->
     <div class="footer-section">
       <div class="footer-content">
-        <p>&copy; 2025 TradingAgents-CN. All rights reserved.</p>
+        <p>&copy; 2025 StockAgent. All rights reserved.</p>
         <p>许可证说明：开源组件遵循 Apache 2.0；前端与后端采用专有许可证（个人学习/研究免费，商业使用需授权）。</p>
       </div>
     </div>

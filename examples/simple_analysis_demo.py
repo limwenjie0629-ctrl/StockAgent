@@ -19,7 +19,7 @@ sys.path.insert(0, str(project_root))
 def quick_analysis_demo():
     """快速分析演示"""
     
-    logger.info(f"🚀 TradingAgents-CN 快速投资分析演示")
+    logger.info(f"🚀 StockAgent 快速投资分析演示")
     logger.info(f"=")
     
     # 检查环境

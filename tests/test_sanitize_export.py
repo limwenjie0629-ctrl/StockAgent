@@ -149,7 +149,7 @@ def test_sanitize_complex_structure():
                     "finnhub_api_key": "xxx",
                     "tushare_token": "yyy",
                     "reddit_client_secret": "zzz",
-                    "app_name": "TradingAgents"
+                    "app_name": "StockAgent"
                 }
             }
         ],
@@ -172,7 +172,7 @@ def test_sanitize_complex_structure():
     assert result["system_configs"][0]["system_settings"]["finnhub_api_key"] == ""
     assert result["system_configs"][0]["system_settings"]["tushare_token"] == ""
     assert result["system_configs"][0]["system_settings"]["reddit_client_secret"] == ""
-    assert result["system_configs"][0]["system_settings"]["app_name"] == "TradingAgents"
+    assert result["system_configs"][0]["system_settings"]["app_name"] == "StockAgent"
     
     # 检查 llm_providers 中的 api_key 被清空
     assert result["llm_providers"][0]["api_key"] == ""

@@ -228,7 +228,7 @@ docker run -d -p 6379:6379 --name redis redis:alpine
 
 def main():
     """主函数"""
-    logger.info(f"🔧 TradingAgents 依赖检查和配置")
+    logger.info(f"🔧 StockAgent 依赖检查和配置")
     logger.info(f"=")
     
     # 检查基本依赖

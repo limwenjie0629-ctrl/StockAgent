@@ -262,7 +262,7 @@ def test_database_connection():
 
 def main():
     """主函数"""
-    logger.info(f"🚀 TradingAgents 数据库初始化")
+    logger.info(f"🚀 StockAgent 数据库初始化")
     logger.info(f"=")
     
     # 测试连接

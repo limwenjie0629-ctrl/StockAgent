@@ -135,7 +135,7 @@ def start_web_app():
 
 def main():
     """主函数"""
-    print("🔧 TradingAgents-CN 安装和启动工具")
+    print("🔧 StockAgent 安装和启动工具")
     print("=" * 50)
     
     # 检查虚拟环境

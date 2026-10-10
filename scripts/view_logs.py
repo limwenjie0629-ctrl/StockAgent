@@ -159,7 +159,7 @@ def search_logs(keyword, log_files=None):
 
 def main():
     """主函数"""
-    print("🚀 TradingAgents 日志查看工具")
+    print("🚀 StockAgent 日志查看工具")
     print("=" * 50)
     
     while True:
@@ -213,7 +213,7 @@ def main():
                 print("🐳 查看Docker容器日志...")
                 print("💡 运行以下命令查看Docker日志:")
                 print("   docker-compose logs -f web")
-                print("   docker logs TradingAgents-web")
+                print("   docker logs StockAgent-web")
             else:
                 print("❌ 无效选择，请重新输入")
                 

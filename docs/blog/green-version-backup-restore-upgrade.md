@@ -1,6 +1,6 @@
-# TradingAgents 绿色版：数据备份、还原与升级完全指南
+# StockAgent 绿色版：数据备份、还原与升级完全指南
 
-> **作者**: TradingAgents 团队  
+> **作者**: StockAgent 团队  
 > **日期**: 2025-11-06  
 > **标签**: 绿色版, 数据备份, 升级指南, 运维
 
@@ -27,7 +27,7 @@
 
 ## 1. 什么是绿色版
 
-**绿色版**（Portable Version）是指无需安装、解压即用的软件版本。TradingAgents 绿色版具有以下特点：
+**绿色版**（Portable Version）是指无需安装、解压即用的软件版本。StockAgent 绿色版具有以下特点：
 
 ✅ **免安装**：解压到任意目录即可运行  
 ✅ **数据独立**：所有数据存储在程序目录内  
@@ -40,11 +40,11 @@
 
 ### 2.1 需要备份的内容
 
-在 TradingAgents 绿色版中，以下内容需要定期备份：
+在 StockAgent 绿色版中，以下内容需要定期备份：
 
 #### �️ MongoDB 数据库（核心数据）
 
-TradingAgents 使用 MongoDB 存储所有核心数据，这是**最重要**的备份内容：
+StockAgent 使用 MongoDB 存储所有核心数据，这是**最重要**的备份内容：
 
 | 数据库/集合 | 说明 | 重要性 | 大小估算 |
 |-----------|------|--------|---------|
@@ -271,7 +271,7 @@ Write-Host "✅ 配置文件备份完成：$configBackup.zip" -ForegroundColor G
 创建文件 `scripts/backup/auto_backup_all.ps1`：
 
 ```powershell
-# TradingAgents 完整自动备份脚本（MongoDB + 配置文件）
+# StockAgent 完整自动备份脚本（MongoDB + 配置文件）
 # 使用方法：在 Windows 任务计划程序中设置定时运行
 
 param(
@@ -279,7 +279,7 @@ param(
     [int]$MongoPort = 27017,
     [string]$Database = "tradingagents",
     [string]$SourceDir = "C:\TradingAgentsCN",
-    [string]$BackupDir = "C:\Backups\TradingAgents",
+    [string]$BackupDir = "C:\Backups\StockAgent",
     [int]$RetentionDays = 30  # 保留最近30天的备份
 )
 
@@ -288,7 +288,7 @@ $backupDate = Get-Date -Format "yyyyMMdd_HHmmss"
 $todayBackup = Join-Path $BackupDir $backupDate
 New-Item -ItemType Directory -Path $todayBackup -Force | Out-Null
 
-Write-Host "🔄 开始完整备份 TradingAgents..." -ForegroundColor Cyan
+Write-Host "🔄 开始完整备份 StockAgent..." -ForegroundColor Cyan
 Write-Host "📅 备份时间: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" -ForegroundColor Yellow
 
 # 1. 备份 MongoDB 数据库
@@ -362,7 +362,7 @@ Write-Host "━━━━━━━━━━━━━━━━━━━━━━�
 
 1. 打开"任务计划程序"（Task Scheduler）
 2. 点击"创建基本任务"
-3. 设置任务名称：`TradingAgents 自动备份`
+3. 设置任务名称：`StockAgent 自动备份`
 4. 设置触发器：
    - **每天凌晨 2:00**（推荐）
    - 或**每周日凌晨 2:00**
@@ -413,7 +413,7 @@ mongo --eval "db.version()"
 # 保存为：scripts/restore/restore_mongodb.ps1
 
 param(
-    [string]$BackupFile = "C:\Backups\TradingAgents\20251106_020000.zip",
+    [string]$BackupFile = "C:\Backups\StockAgent\20251106_020000.zip",
     [string]$MongoHost = "localhost",
     [int]$MongoPort = 27017,
     [string]$Database = "tradingagents",
@@ -487,7 +487,7 @@ Write-Host "`n✅ 还原完成！" -ForegroundColor Green
 # MongoDB 数据还原脚本
 # 保存为：scripts/restore/restore_mongodb.sh
 
-BACKUP_FILE="/backups/TradingAgents/20251106_020000.tar.gz"
+BACKUP_FILE="/backups/StockAgent/20251106_020000.tar.gz"
 MONGO_HOST="localhost"
 MONGO_PORT=27017
 DATABASE="tradingagents"
@@ -550,11 +550,11 @@ echo -e "\n✅ 还原完成！"
 ```bash
 # Windows - 还原数据（保留现有数据）
 powershell -ExecutionPolicy Bypass -File scripts/restore/restore_mongodb.ps1 `
-    -BackupFile "C:\Backups\TradingAgents\20251106_020000.zip"
+    -BackupFile "C:\Backups\StockAgent\20251106_020000.zip"
 
 # Windows - 还原数据（删除现有数据）
 powershell -ExecutionPolicy Bypass -File scripts/restore/restore_mongodb.ps1 `
-    -BackupFile "C:\Backups\TradingAgents\20251106_020000.zip" `
+    -BackupFile "C:\Backups\StockAgent\20251106_020000.zip" `
     -Drop
 
 # Linux / macOS
@@ -566,7 +566,7 @@ chmod +x scripts/restore/restore_mongodb.sh
 
 ```bash
 # Windows PowerShell
-$backupZip = "C:\Backups\TradingAgents\20251106_020000.zip"
+$backupZip = "C:\Backups\StockAgent\20251106_020000.zip"
 $tempDir = "C:\Temp\Config_Restore"
 
 # 解压
@@ -611,7 +611,7 @@ python -m tradingagents.cli start
 ```bash
 # Windows PowerShell
 # 只还原股票基本信息和配置
-$backupZip = "C:\Backups\TradingAgents\20251106_020000.zip"
+$backupZip = "C:\Backups\StockAgent\20251106_020000.zip"
 $tempDir = "C:\Temp\Partial_Restore"
 
 # 解压
@@ -668,7 +668,7 @@ mongo temp_restore --eval "db.dropDatabase()"
 - [ ] 完整备份当前版本（参考 2.2 节）
 - [ ] 记录当前版本号
 - [ ] 确保有足够的磁盘空间
-- [ ] 关闭所有正在运行的 TradingAgents 进程
+- [ ] 关闭所有正在运行的 StockAgent 进程
 
 #### 查看当前版本
 
@@ -862,7 +862,7 @@ mongorestore --host localhost --port 27017 --db tradingagents backup/tradingagen
 ```bash
 # Windows PowerShell
 # 1. 检查备份文件大小
-$backupFile = "C:\Backups\TradingAgents\20251106_020000.zip"
+$backupFile = "C:\Backups\StockAgent\20251106_020000.zip"
 $fileSize = [math]::Round((Get-Item $backupFile).Length / 1MB, 2)
 Write-Host "备份文件大小: $fileSize MB"
 
@@ -910,11 +910,11 @@ Remove-Item -Path $tempDir -Recurse -Force
 powershell -File scripts/backup/backup_mongodb.ps1
 
 # 2. 同步到云存储（例如 OneDrive）
-$backupFile = Get-ChildItem "C:\Backups\TradingAgents" -Filter "*.zip" |
+$backupFile = Get-ChildItem "C:\Backups\StockAgent" -Filter "*.zip" |
     Sort-Object CreationTime -Descending |
     Select-Object -First 1
 
-Copy-Item -Path $backupFile.FullName -Destination "D:\OneDrive\TradingAgents\Backups\"
+Copy-Item -Path $backupFile.FullName -Destination "D:\OneDrive\StockAgent\Backups\"
 ```
 
 #### 方案 3：使用 MongoDB Atlas（云数据库）
@@ -934,12 +934,12 @@ MONGODB_URI=mongodb+srv://username:password@cluster.mongodb.net/tradingagents
 
 ```bash
 # 1. 查找最近的备份
-Get-ChildItem "C:\Backups\TradingAgents" -Filter "*.zip" |
+Get-ChildItem "C:\Backups\StockAgent" -Filter "*.zip" |
     Sort-Object CreationTime -Descending |
     Select-Object -First 1
 
 # 2. 还原 MongoDB 数据
-$latestBackup = "C:\Backups\TradingAgents\20251106_020000.zip"
+$latestBackup = "C:\Backups\StockAgent\20251106_020000.zip"
 powershell -ExecutionPolicy Bypass -File scripts/restore/restore_mongodb.ps1 `
     -BackupFile $latestBackup `
     -Drop
@@ -961,8 +961,8 @@ mongo tradingagents --eval "db.stock_daily_quotes.count()"
 powershell -File scripts/backup/backup_mongodb.ps1
 
 # 2. 备份配置文件
-Copy-Item -Path "C:\TradingAgentsCN\.env" -Destination "C:\Backups\TradingAgents\"
-Copy-Item -Path "C:\TradingAgentsCN\config" -Destination "C:\Backups\TradingAgents\config" -Recurse
+Copy-Item -Path "C:\TradingAgentsCN\.env" -Destination "C:\Backups\StockAgent\"
+Copy-Item -Path "C:\TradingAgentsCN\config" -Destination "C:\Backups\StockAgent\config" -Recurse
 ```
 
 #### 步骤 2：传输备份文件
@@ -975,7 +975,7 @@ Copy-Item -Path "C:\TradingAgentsCN\config" -Destination "C:\Backups\TradingAgen
 
 ```bash
 # 1. 安装 Python、MongoDB
-# 2. 下载 TradingAgents 绿色版
+# 2. 下载 StockAgent 绿色版
 # 3. 还原 MongoDB 数据
 powershell -File scripts/restore/restore_mongodb.ps1 -BackupFile "备份文件路径"
 
@@ -1004,7 +1004,7 @@ git checkout v1.0.0
 
 # 3. 如果数据结构有变化，还原旧版本的数据备份
 powershell -File scripts/restore/restore_mongodb.ps1 `
-    -BackupFile "C:\Backups\TradingAgents\v1.0.0_backup.zip" `
+    -BackupFile "C:\Backups\StockAgent\v1.0.0_backup.zip" `
     -Drop
 
 # 4. 重启服务
@@ -1036,8 +1036,8 @@ python -m tradingagents.cli start
 ```
 示例：
 ├─ 原始数据：C:\TradingAgentsCN\（MongoDB 运行中）
-├─ 本地备份：C:\Backups\TradingAgents\（本地硬盘）
-├─ 云端备份：OneDrive\TradingAgents\Backups\（云存储）
+├─ 本地备份：C:\Backups\StockAgent\（本地硬盘）
+├─ 云端备份：OneDrive\StockAgent\Backups\（云存储）
 └─ 异地备份：移动硬盘（每周同步一次）
 ```
 
@@ -1052,8 +1052,8 @@ MongoDB 备份包含敏感的股票数据和配置信息，务必加密：
 ```bash
 # Windows - 使用 7-Zip 加密
 7z a -p"your_strong_password" -mhe=on `
-    "C:\Backups\TradingAgents\encrypted_backup.7z" `
-    "C:\Backups\TradingAgents\20251106_020000.zip"
+    "C:\Backups\StockAgent\encrypted_backup.7z" `
+    "C:\Backups\StockAgent\20251106_020000.zip"
 
 # Linux - 使用 GPG 加密
 gpg --symmetric --cipher-algo AES256 backup.tar.gz
@@ -1065,13 +1065,13 @@ gpg --symmetric --cipher-algo AES256 backup.tar.gz
 
 ```powershell
 # 自动同步到 OneDrive
-$backupFile = Get-ChildItem "C:\Backups\TradingAgents" -Filter "*.zip" |
+$backupFile = Get-ChildItem "C:\Backups\StockAgent" -Filter "*.zip" |
     Sort-Object CreationTime -Descending |
     Select-Object -First 1
 
 # 复制到 OneDrive
 Copy-Item -Path $backupFile.FullName `
-    -Destination "D:\OneDrive\TradingAgents\Backups\" `
+    -Destination "D:\OneDrive\StockAgent\Backups\" `
     -Force
 
 Write-Host "✅ 备份已同步到 OneDrive" -ForegroundColor Green
@@ -1081,7 +1081,7 @@ Write-Host "✅ 备份已同步到 OneDrive" -ForegroundColor Green
 
 ```bash
 # 每周同步到移动硬盘
-robocopy "C:\Backups\TradingAgents" "E:\TradingAgents_Backups" /MIR /Z /W:5
+robocopy "C:\Backups\StockAgent" "E:\TradingAgents_Backups" /MIR /Z /W:5
 ```
 
 #### 3. 保护敏感信息
@@ -1173,7 +1173,7 @@ if ($LASTEXITCODE -eq 0) {
     # 发送告警邮件
     Send-MailMessage -To "admin@example.com" `
         -From "backup@example.com" `
-        -Subject "TradingAgents 备份失败" `
+        -Subject "StockAgent 备份失败" `
         -Body "备份任务执行失败，请检查日志" `
         -SmtpServer "smtp.example.com"
 }
@@ -1183,7 +1183,7 @@ if ($LASTEXITCODE -eq 0) {
 
 ```powershell
 # 检查备份文件大小是否异常
-$backupFile = Get-ChildItem "C:\Backups\TradingAgents" -Filter "*.zip" |
+$backupFile = Get-ChildItem "C:\Backups\StockAgent" -Filter "*.zip" |
     Sort-Object CreationTime -Descending |
     Select-Object -First 1
 
@@ -1247,5 +1247,5 @@ mongo tradingagents_test --eval "db.dropDatabase()"
 ---
 
 **最后更新**: 2025-11-06  
-**适用版本**: TradingAgents v1.0.0+
+**适用版本**: StockAgent v1.0.0+
 

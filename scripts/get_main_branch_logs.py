@@ -25,9 +25,9 @@ def find_tradingagents_container():
     """查找TradingAgents Web容器"""
     print("🔍 查找TradingAgents Web容器...")
     
-    # 根据docker-compose.yml，容器名应该是 TradingAgents-web
+    # 根据docker-compose.yml，容器名应该是 StockAgent-web
     container_names = [
-        "TradingAgents-web",
+        "StockAgent-web",
         "tradingagents-web", 
         "tradingagents_web_1",
         "tradingagents-cn_web_1"
@@ -257,7 +257,7 @@ def get_recent_activity(container_name):
 
 def main():
     """主函数"""
-    print("🚀 TradingAgents 主分支日志获取工具")
+    print("🚀 StockAgent 主分支日志获取工具")
     print("=" * 60)
     print(f"⏰ 执行时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
     

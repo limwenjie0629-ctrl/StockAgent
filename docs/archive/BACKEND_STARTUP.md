@@ -1,4 +1,4 @@
-# TradingAgents-CN 后端启动指南
+# StockAgent 后端启动指南
 
 ## 🚀 启动方式
 

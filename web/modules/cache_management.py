@@ -41,7 +41,7 @@ OPTIMIZED_PROVIDERS_AVAILABLE = OPTIMIZED_CHINA_AVAILABLE or OPTIMIZED_US_AVAILA
 
 def main():
     st.set_page_config(
-        page_title="缓存管理 - TradingAgents",
+        page_title="缓存管理 - StockAgent",
         page_icon="💾",
         layout="wide"
     )
@@ -328,7 +328,7 @@ def main():
     st.markdown("""
     <div style='text-align: center; color: #666; font-size: 0.9em;'>
         💾 缓存管理系统 | TradingAgents v0.1.2 | 
-        <a href='https://github.com/your-repo/TradingAgents' target='_blank'>GitHub</a>
+        <a href='https://github.com/your-repo/StockAgent' target='_blank'>GitHub</a>
     </div>
     """, unsafe_allow_html=True)
 

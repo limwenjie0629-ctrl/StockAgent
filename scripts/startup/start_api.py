@@ -197,7 +197,7 @@ def check_services():
 
 def main():
     """主函数"""
-    print("🚀 TradingAgents-CN v1.0.0-preview API服务启动器")
+    print("🚀 StockAgent v1.0.0-preview API服务启动器")
     print("=" * 60)
     
     # 检查依赖

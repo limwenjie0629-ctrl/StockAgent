@@ -2,7 +2,7 @@
 
 ## 📋 概述
 
-本文档详细介绍TradingAgents-CN在Docker环境中的配置方法，包括环境变量设置、服务配置、网络配置和数据持久化配置。
+本文档详细介绍StockAgent在Docker环境中的配置方法，包括环境变量设置、服务配置、网络配置和数据持久化配置。
 
 ## 🎯 Docker配置特点
 
@@ -29,7 +29,7 @@
 ```bash
 # === Docker环境基础配置 ===
 # 应用配置
-APP_NAME=TradingAgents-CN
+APP_NAME=StockAgent
 APP_VERSION=0.1.7
 APP_ENV=production
 
@@ -102,7 +102,7 @@ version: '3.8'
 services:
   web:
     build: .
-    container_name: TradingAgents-web
+    container_name: StockAgent-web
     ports:
       - "${WEB_PORT:-8501}:8501"
     environment:
@@ -142,7 +142,7 @@ services:
 ```yaml
   mongodb:
     image: mongo:4.4
-    container_name: TradingAgents-mongodb
+    container_name: StockAgent-mongodb
     ports:
       - "${MONGODB_PORT:-27017}:27017"
     environment:
@@ -159,7 +159,7 @@ services:
 
   redis:
     image: redis:6-alpine
-    container_name: TradingAgents-redis
+    container_name: StockAgent-redis
     ports:
       - "${REDIS_PORT:-6379}:6379"
     command: redis-server --appendonly yes --requirepass ${REDIS_PASSWORD:-}
@@ -175,7 +175,7 @@ services:
 ```yaml
   mongo-express:
     image: mongo-express
-    container_name: TradingAgents-mongo-express
+    container_name: StockAgent-mongo-express
     ports:
       - "${MONGO_EXPRESS_PORT:-8081}:8081"
     environment:
@@ -193,7 +193,7 @@ services:
 
   redis-commander:
     image: rediscommander/redis-commander
-    container_name: TradingAgents-redis-commander
+    container_name: StockAgent-redis-commander
     ports:
       - "${REDIS_COMMANDER_PORT:-8082}:8081"
     environment:
@@ -370,8 +370,8 @@ MAX_CPU=2.0
 1. **服务连接失败**
    ```bash
    # 检查网络连接
-   docker exec TradingAgents-web ping mongodb
-   docker exec TradingAgents-web ping redis
+   docker exec StockAgent-web ping mongodb
+   docker exec StockAgent-web ping redis
    ```
 
 2. **数据持久化问题**
@@ -384,7 +384,7 @@ MAX_CPU=2.0
 3. **环境变量问题**
    ```bash
    # 检查环境变量
-   docker exec TradingAgents-web env | grep MONGODB
+   docker exec StockAgent-web env | grep MONGODB
    ```
 
 ---

@@ -1,1 +1,1 @@
-# TradingAgents Tests Package
+# StockAgent Tests Package

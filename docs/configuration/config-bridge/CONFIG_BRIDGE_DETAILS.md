@@ -2,7 +2,7 @@
 
 ## 📋 概述
 
-配置桥接模块 (`app/core/config_bridge.py`) 负责将统一配置系统中的配置桥接到环境变量，让 TradingAgents 核心库能够使用用户在 Web 界面中配置的参数。
+配置桥接模块 (`app/core/config_bridge.py`) 负责将统一配置系统中的配置桥接到环境变量，让 StockAgent 核心库能够使用用户在 Web 界面中配置的参数。
 
 ## 🎯 桥接的配置类型
 
@@ -118,7 +118,7 @@ os.environ['TUSHARE_CACHE_ENABLED'] = "true"
 
 从系统设置 (`system_settings`) 读取运行时参数：
 
-#### TradingAgents 港股配置
+#### StockAgent 港股配置
 
 ```python
 system_settings = {
@@ -222,7 +222,7 @@ def _bridge_datasource_details(data_source_configs) -> int:
 ```python
 def _bridge_system_settings() -> int:
     """桥接系统运行时配置到环境变量"""
-    # TradingAgents 运行时配置
+    # StockAgent 运行时配置
     # 时区配置
     # 货币偏好
 ```
@@ -237,7 +237,7 @@ def clear_bridged_config():
     # 清除模型配置
     # 清除数据源 API 密钥
     # 清除数据源细节配置
-    # 清除 TradingAgents 运行时配置
+    # 清除 StockAgent 运行时配置
     # 清除系统配置
 ```
 
@@ -252,11 +252,11 @@ def reload_bridged_config():
     return bridge_config_to_env()
 ```
 
-## 🎯 TradingAgents 如何使用
+## 🎯 StockAgent 如何使用
 
 ### 1. 数据源配置
 
-TradingAgents 的数据源配置管理器 (`tradingagents/config/providers_config.py`) 从环境变量读取：
+StockAgent 的数据源配置管理器 (`tradingagents/config/providers_config.py`) 从环境变量读取：
 
 ```python
 class DataSourceConfig:
@@ -275,7 +275,7 @@ class DataSourceConfig:
 
 ### 2. 运行时配置
 
-TradingAgents 的运行时设置 (`tradingagents/config/runtime_settings.py`) 从环境变量读取：
+StockAgent 的运行时设置 (`tradingagents/config/runtime_settings.py`) 从环境变量读取：
 
 ```python
 def get_number(env_var: str, system_key: Optional[str], default: float | int, caster: Callable[[Any], Any]):

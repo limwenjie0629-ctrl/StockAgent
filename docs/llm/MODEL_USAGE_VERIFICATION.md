@@ -205,7 +205,7 @@ def _get_trading_graph(self, config: Dict[str, Any]) -> TradingAgentsGraph:
 
 ### 步骤 4：验证模型实际调用
 
-在分析过程中，你还会看到 TradingAgents 库的日志，显示实际调用的模型：
+在分析过程中，你还会看到 StockAgent 库的日志，显示实际调用的模型：
 
 ```
 🤖 [LLM调用] 使用模型: qwen-turbo (快速分析)

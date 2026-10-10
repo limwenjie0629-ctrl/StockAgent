@@ -1,8 +1,8 @@
-# TradingAgents 数据流架构
+# StockAgent 数据流架构
 
 ## 概述
 
-TradingAgents 采用多层次数据流架构，支持中国A股、港股和美股的全面数据获取和处理。系统通过统一的数据接口、智能的数据源管理和高效的缓存机制，为智能体提供高质量的金融数据服务。
+StockAgent 采用多层次数据流架构，支持中国A股、港股和美股的全面数据获取和处理。系统通过统一的数据接口、智能的数据源管理和高效的缓存机制，为智能体提供高质量的金融数据服务。
 
 ## 🏗️ 数据流架构设计
 
@@ -413,7 +413,7 @@ def fetch_top_from_category(subreddit: str, category: str = "hot",
         reddit = praw.Reddit(
             client_id=os.getenv('REDDIT_CLIENT_ID'),
             client_secret=os.getenv('REDDIT_CLIENT_SECRET'),
-            user_agent='TradingAgents/1.0'
+            user_agent='StockAgent/1.0'
         )
         
         subreddit_obj = reddit.subreddit(subreddit)
@@ -660,8 +660,8 @@ def get_config() -> Dict[str, Any]:
     global _config
     if _config is None:
         _config = {
-            "data_dir": os.path.join(os.path.expanduser("~"), "Documents", "TradingAgents", "data"),
-            "cache_dir": os.path.join(os.path.expanduser("~"), "Documents", "TradingAgents", "cache"),
+            "data_dir": os.path.join(os.path.expanduser("~"), "Documents", "StockAgent", "data"),
+            "cache_dir": os.path.join(os.path.expanduser("~"), "Documents", "StockAgent", "cache"),
             "cache_expiry": {
                 "market_data": 300,      # 5分钟
                 "news_data": 3600,       # 1小时
@@ -1585,7 +1585,7 @@ PERFORMANCE_THRESHOLDS = {
 
 ## 📋 总结
 
-TradingAgents 的数据流架构具有以下特点：
+StockAgent 的数据流架构具有以下特点：
 
 ### ✅ 优势
 
@@ -1610,4 +1610,4 @@ TradingAgents 的数据流架构具有以下特点：
 3. **云原生**: 支持云端数据源和分布式缓存
 4. **国际化**: 扩展更多国际市场数据源
 
-通过这个数据流架构，TradingAgents 能够为智能体提供高质量、高可用的金融数据服务，支撑复杂的投资决策分析。
+通过这个数据流架构，StockAgent 能够为智能体提供高质量、高可用的金融数据服务，支撑复杂的投资决策分析。

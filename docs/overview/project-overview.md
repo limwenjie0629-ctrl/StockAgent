@@ -1,8 +1,8 @@
-# TradingAgents 项目概述
+# StockAgent 项目概述
 
 ## 项目简介
 
-TradingAgents-CN 是一个基于多智能体大语言模型（LLM）的金融交易框架，由 Tauric Research 开发并开源。本项目为中文增强版（v0.1.7），专为中国用户提供完整的A股支持、国产LLM集成、Docker容器化部署和专业报告导出功能。
+StockAgent 是一个基于多智能体大语言模型（LLM）的金融交易框架，由 Tauric Research 开发并开源。本项目为中文增强版（v0.1.7），专为中国用户提供完整的A股支持、国产LLM集成、Docker容器化部署和专业报告导出功能。
 
 该项目模拟真实世界交易公司的运作模式，通过部署多个专业化的AI智能体来协作评估市场条件并做出交易决策。
 
@@ -11,7 +11,7 @@ TradingAgents-CN 是一个基于多智能体大语言模型（LLM）的金融交
 ### 研究动机
 传统的算法交易系统通常依赖单一的分析模型或策略，难以应对复杂多变的金融市场。而真实的交易公司通常采用团队协作的方式，由不同专业背景的分析师、研究员、交易员和风险管理人员共同参与决策过程。
 
-TradingAgents 项目的核心理念是将这种人类专家团队的协作模式数字化，通过多个专业化的AI智能体来重现这种协作决策过程。
+StockAgent 项目的核心理念是将这种人类专家团队的协作模式数字化，通过多个专业化的AI智能体来重现这种协作决策过程。
 
 ### 技术创新
 - **多智能体协作**: 首次将多智能体系统应用于金融交易决策
@@ -158,16 +158,16 @@ TradingAgents 项目的核心理念是将这种人类专家团队的协作模式
 
 ## 免责声明
 
-TradingAgents 框架仅用于研究和教育目的。交易表现可能因多种因素而异，包括所选择的骨干语言模型、模型温度、交易周期、数据质量和其他非确定性因素。
+StockAgent 框架仅用于研究和教育目的。交易表现可能因多种因素而异，包括所选择的骨干语言模型、模型温度、交易周期、数据质量和其他非确定性因素。
 
 **本框架不构成财务、投资或交易建议。** 用户在使用本框架进行任何投资决策时，应当谨慎评估风险，并咨询专业的财务顾问。
 
 ## 联系我们
 
 - **官方网站**: [https://tauric.ai](https://tauric.ai)
-- **GitHub**: [https://github.com/TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents)
+- **GitHub**: [https://github.com/TauricResearch/StockAgent](https://github.com/TauricResearch/StockAgent)
 - **Discord**: [TradingResearch](https://discord.com/invite/hk9PGKShPK)
 - **Twitter**: [@TauricResearch](https://x.com/TauricResearch)
 - **邮箱**: contact@tauric.ai
 
-TradingAgents 代表了金融AI技术的前沿探索，我们期待与全球的研究者、开发者和金融专家一起，推动这一领域的发展和创新。
+StockAgent 代表了金融AI技术的前沿探索，我们期待与全球的研究者、开发者和金融专家一起，推动这一领域的发展和创新。

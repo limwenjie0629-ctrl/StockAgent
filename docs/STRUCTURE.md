@@ -142,7 +142,7 @@ docs/
 
 如果您对文档有任何建议或问题，请通过以下方式联系我们：
 
-- **GitHub Issues**: [提交文档相关问题](https://github.com/TauricResearch/TradingAgents/issues)
+- **GitHub Issues**: [提交文档相关问题](https://github.com/TauricResearch/StockAgent/issues)
 - **Discord**: [加入讨论](https://discord.com/invite/hk9PGKShPK)
 - **邮箱**: docs@tauric.ai
 

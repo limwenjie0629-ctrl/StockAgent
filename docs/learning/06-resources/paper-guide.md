@@ -9,7 +9,7 @@
 
 ## 📋 论文信息
 
-**标题**: TradingAgents: 多智能体大语言模型金融交易框架
+**标题**: StockAgent: 多智能体大语言模型金融交易框架
 
 **作者**: Yijia Xiao¹'³, Edward Sun¹'³, Di Luo¹'², Wei Wang¹'³
 
@@ -18,9 +18,9 @@
 ³ Tauric Research
 
 **资源**:
-- 📄 [英文原版 PDF](../../paper/TradingAgents_paper.pdf)
-- 📄 [中文翻译版](../../paper/TradingAgents_论文中文版.md)
-- 💻 [项目地址](https://github.com/TauricResearch/TradingAgents)
+- 📄 [英文原版 PDF](../../paper/StockAgent_paper.pdf)
+- 📄 [中文翻译版](../../paper/StockAgent_论文中文版.md)
+- 💻 [项目地址](https://github.com/TauricResearch/StockAgent)
 
 ---
 
@@ -48,7 +48,7 @@
 
 ### 智能体架构
 
-TradingAgents-CN 采用专业化的多智能体架构，每个智能体都有明确的职责和专业领域：
+StockAgent 采用专业化的多智能体架构，每个智能体都有明确的职责和专业领域：
 
 - **分析师团队 (Analysts)**：
   - **基本面分析师**：分析公司财务和基本面数据
@@ -76,7 +76,7 @@ TradingAgents-CN 采用专业化的多智能体架构，每个智能体都有明
 
 ### 数据流架构
 
-TradingAgents-CN 的数据流架构设计用于高效地获取、处理和分发金融数据：
+StockAgent 的数据流架构设计用于高效地获取、处理和分发金融数据：
 
 - **外部数据源**：
   - **FinnHub API**：实时金融数据
@@ -255,7 +255,7 @@ TradingAgents-CN 的数据流架构设计用于高效地获取、处理和分发
 
 ### vs 传统量化策略
 
-| 维度 | 传统量化 | TradingAgents |
+| 维度 | 传统量化 | StockAgent |
 |------|---------|----------|
 | 灵活性 | ❌ 固定规则 | ✅ 自适应 |
 | 可解释性 | ⚠️ 黑盒 | ✅ 可解释 |
@@ -264,7 +264,7 @@ TradingAgents-CN 的数据流架构设计用于高效地获取、处理和分发
 
 ### vs 单一LLM
 
-| 维度 | 单一LLM | TradingAgents |
+| 维度 | 单一LLM | StockAgent |
 |------|---------|----------|
 | 分析深度 | ⚠️ 有限 | ✅ 深入 |
 | 多角度 | ❌ 单一视角 | ✅ 多角度 |
@@ -383,7 +383,7 @@ TradingAgents-CN 的数据流架构设计用于高效地获取、处理和分发
 ---
 
 **推荐阅读顺序**：
-1. 📄 先读[论文中文版](../../paper/TradingAgents_论文中文版.md)
+1. 📄 先读[论文中文版](../../paper/StockAgent_论文中文版.md)
 2. 📖 再看[多智能体系统](../04-analysis-principles/multi-agent-system.md)
 3. 🚀 最后[快速开始](../07-tutorials/getting-started.md)实践
 

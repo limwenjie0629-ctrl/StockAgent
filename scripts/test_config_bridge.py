@@ -38,7 +38,7 @@ async def test_config_bridge():
     system_settings = config_doc.get('system_settings', {})
     print(f"✅ 找到配置，包含 {len(system_settings)} 个设置项")
     
-    # 显示 TradingAgents 相关配置
+    # 显示 StockAgent 相关配置
     ta_keys = [
         'ta_use_app_cache',
         'ta_hk_min_request_interval_seconds',
@@ -48,7 +48,7 @@ async def test_config_bridge():
         'ta_hk_cache_ttl_seconds',
     ]
     
-    print("\n📋 数据库中的 TradingAgents 配置：")
+    print("\n📋 数据库中的 StockAgent 配置：")
     for key in ta_keys:
         value = system_settings.get(key, '未设置')
         print(f"  • {key}: {value}")

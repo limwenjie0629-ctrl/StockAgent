@@ -2,7 +2,7 @@
 
 ## 📋 概述
 
-本文档介绍如何配置TradingAgents-CN的开发环境，包括Docker映射配置和快速调试方法。
+本文档介绍如何配置StockAgent的开发环境，包括Docker映射配置和快速调试方法。
 
 ## 🐳 Docker开发环境
 
@@ -41,13 +41,13 @@ docker-compose ps
 ### 2. 测试转换功能
 ```bash
 # 运行独立转换测试
-docker exec TradingAgents-web python test_conversion.py
+docker exec StockAgent-web python test_conversion.py
 
 # 查看容器日志
-docker logs TradingAgents-web --follow
+docker logs StockAgent-web --follow
 
 # 进入容器调试
-docker exec -it TradingAgents-web bash
+docker exec -it StockAgent-web bash
 ```
 
 ### 3. Web界面测试
@@ -75,7 +75,7 @@ TradingAgentsCN/
 ### 1. 实时日志监控
 ```bash
 # 监控Web应用日志
-docker logs TradingAgents-web --follow
+docker logs StockAgent-web --follow
 
 # 监控所有服务日志
 docker-compose logs --follow
@@ -84,22 +84,22 @@ docker-compose logs --follow
 ### 2. 容器内调试
 ```bash
 # 进入Web容器
-docker exec -it TradingAgents-web bash
+docker exec -it StockAgent-web bash
 
 # 检查Python环境
-docker exec TradingAgents-web python --version
+docker exec StockAgent-web python --version
 
 # 检查依赖
-docker exec TradingAgents-web pip list | grep pandoc
+docker exec StockAgent-web pip list | grep pandoc
 ```
 
 ### 3. 文件同步验证
 ```bash
 # 检查文件是否同步
-docker exec TradingAgents-web ls -la /app/web/utils/
+docker exec StockAgent-web ls -la /app/web/utils/
 
 # 检查文件内容
-docker exec TradingAgents-web head -10 /app/test_conversion.py
+docker exec StockAgent-web head -10 /app/test_conversion.py
 ```
 
 ## 🔄 开发工作流
@@ -113,7 +113,7 @@ docker exec TradingAgents-web head -10 /app/test_conversion.py
 
 ### 导出功能调试流程
 1. **修改导出代码** - 编辑 `web/utils/report_exporter.py`
-2. **运行转换测试** - `docker exec TradingAgents-web python test_conversion.py`
+2. **运行转换测试** - `docker exec StockAgent-web python test_conversion.py`
 3. **检查结果** - 查看生成的测试文件
 4. **Web界面测试** - 在浏览器中测试实际导出功能
 
@@ -181,7 +181,7 @@ docker-compose up -d
 3. **测试流程**
    ```bash
    # 测试基础转换功能
-   docker exec TradingAgents-web python test_conversion.py
+   docker exec StockAgent-web python test_conversion.py
    ```
 
 ### Memory功能开发

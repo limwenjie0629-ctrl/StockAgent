@@ -1,4 +1,4 @@
-# TradingAgents-CN 配置管理全面分析
+# StockAgent 配置管理全面分析
 
 > **文档目的**: 全面梳理系统中所有配置管理相关的代码、存储位置、优先级和使用方式，为后续代码优化和整理提供参考。
 > 
@@ -26,7 +26,7 @@
 
 ### 1.1 配置管理系统架构
 
-TradingAgents-CN 系统存在**多套配置管理系统**，分别服务于不同的模块：
+StockAgent 系统存在**多套配置管理系统**，分别服务于不同的模块：
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -336,11 +336,11 @@ class Settings(BaseSettings):
     BAOSTOCK_UNIFIED_ENABLED: bool = Field(default=True)
 ```
 
-#### 4.1.2 ConfigManager (TradingAgents)
+#### 4.1.2 ConfigManager (StockAgent)
 
 **文件**: `tradingagents/config/config_manager.py`  
 **类**: `ConfigManager`  
-**用途**: 管理 TradingAgents 库的配置（旧格式）
+**用途**: 管理 StockAgent 库的配置（旧格式）
 
 **功能**:
 - 加载/保存 JSON 配置文件
@@ -910,7 +910,7 @@ class ConfigVersion(BaseModel):
 
 ## 总结
 
-TradingAgents-CN 系统的配置管理较为复杂，存在多套配置系统并存的情况。主要问题包括：
+StockAgent 系统的配置管理较为复杂，存在多套配置系统并存的情况。主要问题包括：
 
 1. **配置系统重复** - 旧系统（JSON文件）和新系统（MongoDB）并存
 2. **命名不一致** - 环境变量命名规则不统一
@@ -1117,7 +1117,7 @@ async def startup_event():
 
     # 2. 显示配置摘要
     logger.info("=" * 60)
-    logger.info("TradingAgents-CN Configuration Summary")
+    logger.info("StockAgent Configuration Summary")
     logger.info("=" * 60)
     logger.info(f"Environment: {'Production' if not settings.DEBUG else 'Development'}")
     logger.info(f"MongoDB: {settings.MONGODB_HOST}:{settings.MONGODB_PORT}")

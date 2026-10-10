@@ -1,4 +1,4 @@
-# 🐳 TradingAgents Docker 日志管理指南
+# 🐳 StockAgent Docker 日志管理指南
 
 ## 📋 概述
 
@@ -128,16 +128,16 @@ Select-String -Path logs\tradingagents.log -Pattern "error" -CaseSensitive:$fals
 ### **3. Docker 日志命令**
 ```bash
 # 查看容器日志
-docker logs TradingAgents-web
+docker logs StockAgent-web
 
 # 实时跟踪容器日志
-docker logs -f TradingAgents-web
+docker logs -f StockAgent-web
 
 # 查看最近1小时的日志
-docker logs --since 1h TradingAgents-web
+docker logs --since 1h StockAgent-web
 
 # 查看最后100行日志
-docker logs --tail 100 TradingAgents-web
+docker logs --tail 100 StockAgent-web
 ```
 
 ## 📤 获取日志文件
@@ -150,7 +150,7 @@ docker logs --tail 100 TradingAgents-web
 2. **错误日志文件**: `logs/tradingagents_error.log` (如果存在)
 3. **Docker日志**: 
    ```bash
-   docker logs TradingAgents-web > docker_logs.txt 2>&1
+   docker logs StockAgent-web > docker_logs.txt 2>&1
    ```
 
 ### **快速打包日志**

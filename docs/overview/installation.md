@@ -2,7 +2,7 @@
 
 ## 概述
 
-本指南提供了 TradingAgents 框架的详细安装说明，包括不同操作系统的安装步骤、依赖管理、环境配置和常见问题解决方案。
+本指南提供了 StockAgent 框架的详细安装说明，包括不同操作系统的安装步骤、依赖管理、环境配置和常见问题解决方案。
 
 ## 系统要求
 
@@ -95,10 +95,10 @@ pip3.11 --version
 
 ```bash
 # 克隆项目仓库
-git clone https://github.com/TauricResearch/TradingAgents.git
+git clone https://github.com/TauricResearch/StockAgent.git
 
 # 进入项目目录
-cd TradingAgents
+cd StockAgent
 
 # 查看项目结构
 ls -la
@@ -283,7 +283,7 @@ import os
 def test_installation():
     """测试安装是否成功"""
     
-    print("=== TradingAgents 安装验证 ===\n")
+    print("=== StockAgent 安装验证 ===\n")
     
     # 1. Python 版本检查
     print(f"Python 版本: {sys.version}")
@@ -327,13 +327,13 @@ def test_installation():
         else:
             print(f"❌ {key_name} 未设置")
     
-    # 4. TradingAgents 导入测试
+    # 4. StockAgent 导入测试
     try:
         from tradingagents.graph.trading_graph import TradingAgentsGraph
         from tradingagents.default_config import DEFAULT_CONFIG
-        print("✅ TradingAgents 核心模块导入成功")
+        print("✅ StockAgent 核心模块导入成功")
     except ImportError as e:
-        print(f"❌ TradingAgents 导入失败: {e}")
+        print(f"❌ StockAgent 导入失败: {e}")
         return False
     
     print("\n🎉 安装验证完成!")
@@ -493,11 +493,11 @@ rmdir /s tradingagents  # Windows
 
 # 删除项目文件
 cd ..
-rm -rf TradingAgents
+rm -rf StockAgent
 
 # 清理环境变量 (可选)
 unset OPENAI_API_KEY
 unset FINNHUB_API_KEY
 ```
 
-安装完成后，您可以继续阅读 [快速开始指南](quick-start.md) 来开始使用 TradingAgents。
+安装完成后，您可以继续阅读 [快速开始指南](quick-start.md) 来开始使用 StockAgent。

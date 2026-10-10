@@ -221,7 +221,7 @@ def test_simple_functionality():
     try:
         # 测试TradingAgents导入
         from tradingagents.llm_adapters import ChatDashScopeOpenAI
-        print("✅ TradingAgents LLM适配器导入成功")
+        print("✅ StockAgent LLM适配器导入成功")
         
         # 测试数据流导入
         from tradingagents.dataflows import get_china_stock_data_unified

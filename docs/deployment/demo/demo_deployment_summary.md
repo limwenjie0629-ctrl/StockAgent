@@ -2,7 +2,7 @@
 
 ## 📋 概述
 
-本文档总结了为在远程服务器上部署 TradingAgents 演示系统而创建的完整解决方案。
+本文档总结了为在远程服务器上部署 StockAgent 演示系统而创建的完整解决方案。
 
 ---
 
@@ -60,7 +60,7 @@
 
 **命令**：
 ```bash
-curl -fsSL https://raw.githubusercontent.com/your-org/TradingAgents-CN/main/scripts/deploy_demo.sh | bash
+curl -fsSL https://raw.githubusercontent.com/your-org/StockAgent/main/scripts/deploy_demo.sh | bash
 ```
 
 **自动完成的操作**：
@@ -100,12 +100,12 @@ sudo yum install -y docker-ce docker-ce-cli containerd.io docker-compose-plugin
 
 ```bash
 # 克隆仓库
-git clone https://github.com/your-org/TradingAgents-CN.git
-cd TradingAgents-CN
+git clone https://github.com/your-org/StockAgent.git
+cd StockAgent
 
 # 或下载必要文件
-mkdir -p TradingAgents-Demo/{install,scripts}
-cd TradingAgents-Demo
+mkdir -p StockAgent-Demo/{install,scripts}
+cd StockAgent-Demo
 # 下载 docker-compose.hub.yml、.env.example、配置文件、脚本等
 ```
 
@@ -446,5 +446,5 @@ sudo netstat -tlnp | grep 3000
 
 **部署方案已完成！** 🎉
 
-现在您可以使用这些文件和脚本在任何远程服务器上快速部署 TradingAgents 演示系统。
+现在您可以使用这些文件和脚本在任何远程服务器上快速部署 StockAgent 演示系统。
 

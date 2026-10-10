@@ -268,14 +268,14 @@ def main():
     print("\n💡 接下来的步骤:")
     print("1. 重新构建Docker镜像: docker-compose build")
     print("2. 重启容器: docker-compose down && docker-compose up -d")
-    print("3. 简单测试: docker exec TradingAgents-web python simple_log_test.py")
+    print("3. 简单测试: docker exec StockAgent-web python simple_log_test.py")
     print("4. 检查日志: ls -la logs/")
     print("5. 查看容器日志: docker-compose logs web")
     
     print("\n🔧 如果还有问题:")
     print("- 检查容器启动日志: docker-compose logs web")
-    print("- 进入容器调试: docker exec -it TradingAgents-web bash")
-    print("- 检查配置文件: docker exec TradingAgents-web cat /app/config/logging_docker.toml")
+    print("- 进入容器调试: docker exec -it StockAgent-web bash")
+    print("- 检查配置文件: docker exec StockAgent-web cat /app/config/logging_docker.toml")
 
 if __name__ == "__main__":
     main()

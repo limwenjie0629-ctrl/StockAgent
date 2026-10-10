@@ -5,7 +5,7 @@
 当前系统存在**配置双轨制**问题：
 
 1. **后端 API 层**：使用新版统一配置系统（`unified_config`）
-2. **TradingAgents 核心库**：仍使用旧版配置（`DEFAULT_CONFIG` + 环境变量）
+2. **StockAgent 核心库**：仍使用旧版配置（`DEFAULT_CONFIG` + 环境变量）
 
 这导致用户在配置向导或配置管理界面设置的配置**不会被实际的分析引擎使用**。
 
@@ -25,14 +25,14 @@
 
 | 模块 | 文件 | 问题 |
 |------|------|------|
-| TradingAgents 核心 | `tradingagents/graph/trading_graph.py` | 使用 `DEFAULT_CONFIG` + `os.getenv()` |
+| StockAgent 核心 | `tradingagents/graph/trading_graph.py` | 使用 `DEFAULT_CONFIG` + `os.getenv()` |
 | 配置创建函数 | `app/services/simple_analysis_service.py` | `create_analysis_config()` 基于 `DEFAULT_CONFIG` |
 | CLI 工具 | `cli/main.py` | 使用 `DEFAULT_CONFIG.copy()` |
 | 配置管理器 | `tradingagents/config/config_manager.py` | 独立的配置系统 |
 
 ## 🎯 迁移目标
 
-### 目标 1：TradingAgents 使用统一配置
+### 目标 1：StockAgent 使用统一配置
 
 **修改文件**：`tradingagents/graph/trading_graph.py`
 
@@ -259,14 +259,14 @@ class TradingAgentsGraph:
 **方案 B：配置文件**
 ```python
 # 将统一配置导出为 JSON 文件
-# TradingAgents 从文件读取
+# StockAgent 从文件读取
 config_file = Path("~/.tradingagents/config.json")
 ```
 
 **方案 C：环境变量桥接**（推荐）
 ```python
 # app 层在启动时将配置写入环境变量
-# TradingAgents 从环境变量读取
+# StockAgent 从环境变量读取
 os.environ['TRADINGAGENTS_QUICK_MODEL'] = unified_config.get_quick_analysis_model()
 os.environ['TRADINGAGENTS_DEEP_MODEL'] = unified_config.get_deep_analysis_model()
 ```

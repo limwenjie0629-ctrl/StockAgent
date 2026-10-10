@@ -137,7 +137,7 @@ def test_env_file():
 async def main():
     """主函数"""
     print("=" * 60)
-    print("🔬 TradingAgents 配置迁移测试")
+    print("🔬 StockAgent 配置迁移测试")
     print("=" * 60)
     
     # 测试配置文件

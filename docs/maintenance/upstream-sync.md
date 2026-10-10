@@ -2,7 +2,7 @@
 
 ## 概述
 
-本文档说明如何在当前项目与原项目 [TauricResearch/TradingAgents](https://github.com/TauricResearch/TradingAgents) 差异已经较大的情况下，采用人工选择性方式进行上游同步。
+本文档说明如何在当前项目与原项目 [TauricResearch/StockAgent](https://github.com/TauricResearch/StockAgent) 差异已经较大的情况下，采用人工选择性方式进行上游同步。
 
 > 说明
 >
@@ -35,7 +35,7 @@
 #### 自动监控
 ```bash
 # 设置GitHub通知
-# 1. 访问 https://github.com/TauricResearch/TradingAgents
+# 1. 访问 https://github.com/TauricResearch/StockAgent
 # 2. 点击 "Watch" -> "Custom" -> 选择 "Releases" 和 "Issues"
 # 3. 启用邮件通知
 ```
@@ -72,7 +72,7 @@ git status
 git log --oneline -5
 
 # 2. 如果本地还没有 upstream，先添加一次
-git remote add upstream https://github.com/TauricResearch/TradingAgents.git
+git remote add upstream https://github.com/TauricResearch/StockAgent.git
 
 # 3. 获取上游更新
 git fetch upstream
@@ -271,4 +271,4 @@ git branch -d hotfix/urgent-fix
 - **变更说明**: 详细说明每次同步的内容
 - **用户通知**: 及时通知用户重要更新
 
-通过这套完整的同步策略，我们可以确保 TradingAgents-CN 始终保持与原项目的技术同步，同时维护我们独特的中文增强价值。
+通过这套完整的同步策略，我们可以确保 StockAgent 始终保持与原项目的技术同步，同时维护我们独特的中文增强价值。

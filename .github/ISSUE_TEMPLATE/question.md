@@ -121,5 +121,5 @@ If helpful, please add screenshots.
 - ⚙️ [配置说明](../README.md#配置api密钥)
 
 **社区支持 / Community Support:**
-- 💬 [GitHub Discussions](https://github.com/hsliuping/TradingAgents-CN/discussions)
+- 💬 [GitHub Discussions](https://github.com/hsliuping/StockAgent/discussions)
 - 📧 邮箱: hsliup@163.com

@@ -8,7 +8,7 @@ import sys
 import traceback
 from datetime import datetime
 
-print("🚀 TradingAgents 集成测试")
+print("🚀 StockAgent 集成测试")
 print("=" * 40)
 
 # 测试1：检查文件是否存在

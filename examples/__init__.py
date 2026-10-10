@@ -1,1 +1,1 @@
-# TradingAgents Examples Package
+# StockAgent Examples Package

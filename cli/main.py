@@ -141,8 +141,8 @@ class CLIUserInterface:
 ui = CLIUserInterface()
 
 app = typer.Typer(
-    name="TradingAgents",
-    help="TradingAgents CLI: 多智能体大语言模型金融交易框架 | Multi-Agents LLM Financial Trading Framework",
+    name="StockAgent",
+    help="StockAgent CLI: 多智能体大语言模型金融交易框架 | Multi-Agents LLM Financial Trading Framework",
     add_completion=True,  # Enable shell completion
     rich_markup_mode="rich",  # Enable rich markup
     no_args_is_help=False,  # 不显示帮助，直接进入分析模式
@@ -317,9 +317,9 @@ def update_display(layout, spinner_text=None):
     # Header with welcome message
     layout["header"].update(
         Panel(
-            "[bold green]Welcome to TradingAgents CLI[/bold green]\n"
+            "[bold green]Welcome to StockAgent CLI[/bold green]\n"
             "[dim]© [Tauric Research](https://github.com/TauricResearch)[/dim]",
-            title="Welcome to TradingAgents",
+            title="Welcome to StockAgent",
             border_style="green",
             padding=(1, 2),
             expand=True,
@@ -526,11 +526,11 @@ def get_user_selections():
         with open(welcome_file, "r", encoding="utf-8") as f:
             welcome_ascii = f.read()
     except FileNotFoundError:
-        welcome_ascii = "TradingAgents"
+        welcome_ascii = "StockAgent"
 
     # Create welcome box content
     welcome_content = f"{welcome_ascii}\n"
-    welcome_content += "[bold green]TradingAgents: 多智能体大语言模型金融交易框架 - CLI[/bold green]\n"
+    welcome_content += "[bold green]StockAgent: 多智能体大语言模型金融交易框架 - CLI[/bold green]\n"
     welcome_content += "[bold green]Multi-Agents LLM Financial Trading Framework - CLI[/bold green]\n\n"
     welcome_content += "[bold]工作流程 | Workflow Steps:[/bold]\n"
     welcome_content += "I. 分析师团队 | Analyst Team → II. 研究团队 | Research Team → III. 交易员 | Trader → IV. 风险管理 | Risk Management → V. 投资组合管理 | Portfolio Management\n\n"
@@ -543,7 +543,7 @@ def get_user_selections():
         welcome_content,
         border_style="green",
         padding=(1, 2),
-        title="欢迎使用 TradingAgents | Welcome to TradingAgents",
+        title="欢迎使用 StockAgent | Welcome to StockAgent",
         subtitle="多智能体大语言模型金融交易框架 | Multi-Agents LLM Financial Trading Framework",
     )
     console.print(Align.center(welcome_box))
@@ -1628,7 +1628,7 @@ def config():
     显示和配置系统设置
     Display and configure system settings
     """
-    logger.info(f"\n[bold blue]🔧 TradingAgents 配置 | Configuration[/bold blue]")
+    logger.info(f"\n[bold blue]🔧 StockAgent 配置 | Configuration[/bold blue]")
     logger.info(f"\n[yellow]当前支持的LLM提供商 | Supported LLM Providers:[/yellow]")
 
     providers_table = Table(show_header=True, header_style="bold magenta")
@@ -1744,13 +1744,13 @@ def version():
     except FileNotFoundError:
         version = "1.0.0"
 
-    logger.info(f"\n[bold blue]📊 TradingAgents 版本信息 | Version Information[/bold blue]")
+    logger.info(f"\n[bold blue]📊 StockAgent 版本信息 | Version Information[/bold blue]")
     logger.info(f"[green]版本 | Version:[/green] {version} [yellow](预览版 | Preview)[/yellow]")
     logger.info(f"[green]发布日期 | Release Date:[/green] 2025-06-26")
     logger.info(f"[green]框架 | Framework:[/green] 多智能体金融交易分析 | Multi-Agent Financial Trading Analysis")
     logger.info(f"[green]支持的语言 | Languages:[/green] 中文 | English")
     logger.info(f"[green]开发状态 | Development Status:[/green] [yellow]早期预览版，功能持续完善中[/yellow]")
-    logger.info(f"[green]基于项目 | Based on:[/green] [blue]TauricResearch/TradingAgents[/blue]")
+    logger.info(f"[green]基于项目 | Based on:[/green] [blue]TauricResearch/StockAgent[/blue]")
     logger.info(f"[green]创建目的 | Purpose:[/green] [cyan]更好地在中国推广TradingAgents[/cyan]")
     logger.info(f"[green]主要功能 | Features:[/green]")
     logger.info(f"  • 🤖 多智能体协作分析 | Multi-agent collaborative analysis")
@@ -1770,7 +1770,7 @@ def version():
     logger.info(f"  • 🔄 感谢持续的维护、更新和改进工作")
     logger.info(f"  • 🌍 感谢选择Apache 2.0协议的开源精神")
     logger.info(f"  • 🎯 本项目旨在更好地在中国推广TradingAgents")
-    logger.info(f"  • 🔗 源项目: https://github.com/TauricResearch/TradingAgents")
+    logger.info(f"  • 🔗 源项目: https://github.com/TauricResearch/StockAgent")
 
 
 @app.command(
@@ -1796,7 +1796,7 @@ def data_config(
     
     if reset:
         # 重置为默认配置
-        default_data_dir = os.path.join(os.path.expanduser("~"), "Documents", "TradingAgents", "data")
+        default_data_dir = os.path.join(os.path.expanduser("~"), "Documents", "StockAgent", "data")
         set_data_dir(default_data_dir)
         logger.info(f"[green]✅ 已重置数据目录为默认路径: {default_data_dir}[/green]")
         return
@@ -1879,7 +1879,7 @@ def examples():
     显示可用的示例程序
     Display available example programs
     """
-    logger.info(f"\n[bold blue]📚 TradingAgents 示例程序 | Example Programs[/bold blue]")
+    logger.info(f"\n[bold blue]📚 StockAgent 示例程序 | Example Programs[/bold blue]")
 
     examples_table = Table(show_header=True, header_style="bold magenta")
     examples_table.add_column("类型 | Type", style="cyan")
@@ -1934,7 +1934,7 @@ def test():
     运行系统测试
     Run system tests
     """
-    logger.info(f"\n[bold blue]🧪 TradingAgents 测试 | Tests[/bold blue]")
+    logger.info(f"\n[bold blue]🧪 StockAgent 测试 | Tests[/bold blue]")
 
     logger.info(f"[yellow]正在运行集成测试... | Running integration tests...[/yellow]")
 
@@ -1966,7 +1966,7 @@ def help_chinese():
     显示中文帮助信息
     Display Chinese help information
     """
-    logger.info(f"\n[bold blue]📖 TradingAgents 中文帮助 | Chinese Help[/bold blue]")
+    logger.info(f"\n[bold blue]📖 StockAgent 中文帮助 | Chinese Help[/bold blue]")
 
     logger.info(f"\n[bold yellow]🚀 快速开始 | Quick Start:[/bold yellow]")
     logger.info(f"1. [cyan]python -m cli.main config[/cyan]     # 查看配置信息")
@@ -2019,7 +2019,7 @@ def help_chinese():
     logger.info(f"• 项目文档: docs/ 目录")
     logger.info(f"• 示例程序: examples/ 目录")
     logger.info(f"• 集成测试: tests/ 目录")
-    logger.info(f"• GitHub: https://github.com/TauricResearch/TradingAgents")
+    logger.info(f"• GitHub: https://github.com/TauricResearch/StockAgent")
 
 
 def main():

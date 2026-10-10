@@ -26,10 +26,10 @@ def check_container_status():
         print(output)
         
         # 检查web容器是否运行
-        if "TradingAgents-web" in output and "Up" in output:
+        if "StockAgent-web" in output and "Up" in output:
             return True
         else:
-            print("❌ TradingAgents-web容器未正常运行")
+            print("❌ StockAgent-web容器未正常运行")
             return False
     else:
         print(f"❌ 无法获取容器状态: {error}")
@@ -79,7 +79,7 @@ except Exception as e:
     traceback.print_exc()
 "'''
     
-    success, output, error = run_command(f"docker exec TradingAgents-web {test_cmd}")
+    success, output, error = run_command(f"docker exec StockAgent-web {test_cmd}")
     
     if success:
         print("✅ 容器内日志测试:")
@@ -135,14 +135,14 @@ def check_container_logs():
     """检查容器内日志文件"""
     print("\n🐳 检查容器内日志文件...")
     
-    success, output, error = run_command("docker exec TradingAgents-web ls -la /app/logs/")
+    success, output, error = run_command("docker exec StockAgent-web ls -la /app/logs/")
     
     if success:
         print("✅ 容器内日志目录:")
         print(output)
         
         # 检查具体的日志文件
-        success2, output2, error2 = run_command("docker exec TradingAgents-web find /app/logs -name '*.log*' -type f")
+        success2, output2, error2 = run_command("docker exec StockAgent-web find /app/logs -name '*.log*' -type f")
         if success2 and output2.strip():
             print("📄 容器内日志文件:")
             for log_file in output2.strip().split('\n'):
@@ -150,7 +150,7 @@ def check_container_logs():
                     print(f"   {log_file}")
                     
                     # 获取文件大小
-                    success3, output3, error3 = run_command(f"docker exec TradingAgents-web wc -c {log_file}")
+                    success3, output3, error3 = run_command(f"docker exec StockAgent-web wc -c {log_file}")
                     if success3:
                         size = output3.strip().split()[0]
                         print(f"      大小: {size} 字节")
@@ -166,7 +166,7 @@ def check_docker_stdout_logs():
     """检查Docker标准输出日志"""
     print("\n📋 检查Docker标准输出日志...")
     
-    success, output, error = run_command("docker logs --tail 20 TradingAgents-web")
+    success, output, error = run_command("docker logs --tail 20 StockAgent-web")
     
     if success:
         print("✅ Docker标准输出日志 (最后20行):")

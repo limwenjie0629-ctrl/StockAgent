@@ -1,6 +1,6 @@
 # 贡献指南
 
-感谢您对 TradingAgents-CN 项目的关注！我们欢迎各种形式的贡献，并为持续贡献者提供明确的成长路径和回报机制。
+感谢您对 StockAgent 项目的关注！我们欢迎各种形式的贡献，并为持续贡献者提供明确的成长路径和回报机制。
 
 ---
 
@@ -149,8 +149,8 @@ test: 测试相关
 
 ### 1. 克隆仓库
 ```bash
-git clone https://github.com/hsliuping/TradingAgents-CN.git
-cd TradingAgents-CN
+git clone https://github.com/hsliuping/StockAgent.git
+cd StockAgent
 ```
 
 ### 2. 创建虚拟环境

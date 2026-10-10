@@ -221,7 +221,7 @@ def demo_settings_management():
 
 def main():
     """主演示函数"""
-    logger.info(f"🎯 TradingAgents-CN 配置管理功能演示")
+    logger.info(f"🎯 StockAgent 配置管理功能演示")
     logger.info(f"=")
     logger.info(f"本演示将展示配置管理和成本统计的各项功能")
     print()

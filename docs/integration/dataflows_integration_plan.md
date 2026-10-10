@@ -1,10 +1,10 @@
-# 🔄 TradingAgents DataFlows 整合方案
+# 🔄 StockAgent DataFlows 整合方案
 
 ## 📋 当前架构分析
 
 ### 🏗️ 现有架构
 
-#### 1. **TradingAgents DataFlows** (分析层)
+#### 1. **StockAgent DataFlows** (分析层)
 ```
 tradingagents/dataflows/
 ├── interface.py              # 主要数据接口

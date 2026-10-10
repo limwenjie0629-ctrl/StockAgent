@@ -185,7 +185,7 @@ def test_config_files():
     print("=" * 60)
     print()
     
-    # 检查 TradingAgents 配置文件
+    # 检查 StockAgent 配置文件
     config_dir = Path("config")
     
     print(f"📋 配置目录: {config_dir.absolute()}")

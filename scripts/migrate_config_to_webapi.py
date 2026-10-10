@@ -228,7 +228,7 @@ class ConfigMigrator:
 async def main():
     """主函数"""
     print("=" * 60)
-    print("🔄 TradingAgents 配置迁移工具")
+    print("🔄 StockAgent 配置迁移工具")
     print("=" * 60)
     
     migrator = ConfigMigrator()

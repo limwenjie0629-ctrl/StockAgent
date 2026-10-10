@@ -34,7 +34,7 @@ def setup_logging():
 
 def main():
     """主函数"""
-    print("🚀 启动 TradingAgents-CN 后端服务...")
+    print("🚀 启动 StockAgent 后端服务...")
     
     # 设置日志
     setup_logging()

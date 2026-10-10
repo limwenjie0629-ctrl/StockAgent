@@ -59,7 +59,7 @@ async def main():
         # 检查是否启用了 MongoDB 存储
         if config_manager.mongodb_storage and config_manager.mongodb_storage.is_connected():
             records = config_manager.mongodb_storage.load_usage_records(limit=5)
-            print(f"📊 TradingAgents 记录数: {len(records)}")
+            print(f"📊 StockAgent 记录数: {len(records)}")
             
             if records:
                 print("\n📋 最近的 5 条记录：")
@@ -71,11 +71,11 @@ async def main():
                     print(f"    输出 Token: {record.output_tokens}")
                     print(f"    成本: ¥{record.cost:.4f}")
             else:
-                print("⚠️  TradingAgents 也没有记录")
+                print("⚠️  StockAgent 也没有记录")
         else:
-            print("⚠️  TradingAgents MongoDB 存储未连接")
+            print("⚠️  StockAgent MongoDB 存储未连接")
     except Exception as e:
-        print(f"❌ 检查 TradingAgents 存储失败: {e}")
+        print(f"❌ 检查 StockAgent 存储失败: {e}")
     
     # 4. 检查配置
     print("\n4️⃣ 检查配置...")

@@ -18,7 +18,7 @@ sys.path.insert(0, str(project_root))
 
 def check_system_status():
     """检查系统状态"""
-    logger.debug(f"🔍 TradingAgents 系统状态检查")
+    logger.debug(f"🔍 StockAgent 系统状态检查")
     logger.info(f"=")
     
     # 检查环境配置文件

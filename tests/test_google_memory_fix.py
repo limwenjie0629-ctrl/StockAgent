@@ -93,9 +93,9 @@ def test_google_memory_fixed():
         return False
 
 def test_google_tradingagents_with_memory():
-    """测试带内存的Google AI TradingAgents"""
+    """测试带内存的Google AI StockAgent"""
     try:
-        print("\n🧪 测试带内存的Google AI TradingAgents")
+        print("\n🧪 测试带内存的Google AI StockAgent")
         print("=" * 60)
         
         from tradingagents.graph.trading_graph import TradingAgentsGraph

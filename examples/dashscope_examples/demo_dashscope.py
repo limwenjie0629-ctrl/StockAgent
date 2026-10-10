@@ -25,7 +25,7 @@ load_dotenv()
 
 def main():
     """主函数"""
-    logger.info(f"🚀 TradingAgents 演示 - 阿里百炼版本")
+    logger.info(f"🚀 StockAgent 演示 - 阿里百炼版本")
     logger.info(f"=")
     
     # 检查API密钥
@@ -79,9 +79,9 @@ def main():
     print()
     
     try:
-        logger.info(f"🤖 正在初始化 TradingAgents...")
+        logger.info(f"🤖 正在初始化 StockAgent...")
         ta = TradingAgentsGraph(debug=True, config=config)
-        logger.info(f"✅ TradingAgents 初始化成功!")
+        logger.info(f"✅ StockAgent 初始化成功!")
         print()
         
         # 分析股票

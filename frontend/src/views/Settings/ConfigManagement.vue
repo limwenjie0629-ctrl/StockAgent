@@ -672,8 +672,8 @@
               </el-tooltip>
             </el-form-item>
 
-            <!-- TradingAgents（可选） -->
-            <el-divider content-position="left">TradingAgents（可选）</el-divider>
+            <!-- StockAgent（可选） -->
+            <el-divider content-position="left">StockAgent（可选）</el-divider>
             <el-form-item label="使用 App 缓存优先">
               <el-switch v-model="systemSettings.ta_use_app_cache" :disabled="!isEditable('ta_use_app_cache')" />
               <div class="setting-description">优先使用 App 缓存（stock_basic_info / market_quotes），未命中自动回退直连数据源</div>
@@ -1502,7 +1502,7 @@ const loadSystemSettings = async () => {
       sse_task_max_idle_seconds: 300,
       sse_batch_poll_interval_seconds: 2.0,
       sse_batch_max_idle_seconds: 600,
-      // TradingAgents（可选）默认
+      // StockAgent（可选）默认
       ta_use_app_cache: false,
       ta_hk_min_request_interval_seconds: 2.0,
       ta_hk_timeout_seconds: 60,
@@ -2081,7 +2081,7 @@ const saveSystemSettings = async () => {
       { key: 'sse_task_max_idle_seconds', min: 1 },
       { key: 'sse_batch_poll_interval_seconds', min: 0.000001 },
       { key: 'sse_batch_max_idle_seconds', min: 1 },
-      // TradingAgents（可选）
+      // StockAgent（可选）
       { key: 'ta_hk_min_request_interval_seconds', min: 0.000001 },
       { key: 'ta_hk_timeout_seconds', min: 1 },
       { key: 'ta_hk_max_retries', min: 0 },

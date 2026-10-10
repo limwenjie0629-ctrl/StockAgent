@@ -2,7 +2,7 @@
 
 ## 🎉 系统概述
 
-TradingAgents-CN系统已成功实现了统一的消息数据存储架构，包括社媒消息和内部消息的完整管理体系，为爬虫数据清洗和系统分析提供强大支持。
+StockAgent系统已成功实现了统一的消息数据存储架构，包括社媒消息和内部消息的完整管理体系，为爬虫数据清洗和系统分析提供强大支持。
 
 ### ✅ 核心功能
 
@@ -539,7 +539,7 @@ MONGODB_DB_NAME=tradingagents
 REDIS_URL=redis://localhost:6379
 
 # 可选：爬虫相关配置
-CRAWLER_USER_AGENT=TradingAgents-Crawler/1.0
+CRAWLER_USER_AGENT=StockAgent-Crawler/1.0
 CRAWLER_DELAY_SECONDS=1
 CRAWLER_MAX_RETRIES=3
 ```

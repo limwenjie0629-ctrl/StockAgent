@@ -300,7 +300,7 @@ async def create_sync_status(db):
 async def main():
     """主函数"""
     logger.info("=" * 60)
-    logger.info("TradingAgents-CN v1.0.0-preview 系统初始化")
+    logger.info("StockAgent v1.0.0-preview 系统初始化")
     logger.info("=" * 60)
     
     try:

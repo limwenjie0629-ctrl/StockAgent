@@ -232,7 +232,7 @@ AttributeError: 'DataSourceConfig' object has no attribute 'source_type'
 即使配置桥接失败，系统仍然可以使用 `.env` 文件中的配置：
 
 ```
-2025-10-07 09:28:20 | app.config_bridge    | WARNING  | ⚠️  TradingAgents 将使用 .env 文件中的配置
+2025-10-07 09:28:20 | app.config_bridge    | WARNING  | ⚠️  StockAgent 将使用 .env 文件中的配置
 ```
 
 ## 📚 相关文档
@@ -244,7 +244,7 @@ AttributeError: 'DataSourceConfig' object has no attribute 'source_type'
 
 ## 🎉 结论
 
-配置桥接功能基本实现并测试成功！虽然还有一些小问题需要修复，但核心功能已经正常工作。用户在配置管理界面中设置的配置现在可以被 TradingAgents 核心库使用了。
+配置桥接功能基本实现并测试成功！虽然还有一些小问题需要修复，但核心功能已经正常工作。用户在配置管理界面中设置的配置现在可以被 StockAgent 核心库使用了。
 
 **下一步**:
 1. 修复系统设置桥接问题

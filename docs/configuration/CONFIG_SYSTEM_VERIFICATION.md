@@ -98,7 +98,7 @@ def _bridge_system_settings() -> int:
         finally:
             client.close()
 
-        # 桥接 TradingAgents 配置到环境变量
+        # 桥接 StockAgent 配置到环境变量
         ta_settings = {
             'ta_hk_min_request_interval_seconds': 'TA_HK_MIN_REQUEST_INTERVAL_SECONDS',
             'ta_hk_timeout_seconds': 'TA_HK_TIMEOUT_SECONDS',
@@ -148,7 +148,7 @@ def _bridge_system_settings() -> int:
 2️⃣ 读取数据库配置...
 ✅ 找到配置，包含 33 个设置项
 
-📋 数据库中的 TradingAgents 配置：
+📋 数据库中的 StockAgent 配置：
   • ta_use_app_cache: True
   • ta_hk_min_request_interval_seconds: 2
   • ta_hk_timeout_seconds: 60
@@ -240,7 +240,7 @@ def _bridge_system_settings() -> int:
                      │
                      ▼
 ┌─────────────────────────────────────────────────────────────┐
-│         TradingAgents 各模块使用配置                          │
+│         StockAgent 各模块使用配置                          │
 │    - HKStockProvider (港股数据提供器)                         │
 │    - MongoDBCacheAdapter (缓存适配器)                        │
 │    - OptimizedChinaData (中国数据优化)                        │
@@ -314,7 +314,7 @@ class MongoDBCacheAdapter:
 1. **配置保存**：✅ 配置正确保存到 MongoDB 数据库
 2. **配置桥接**：✅ 应用启动时将数据库配置同步到环境变量
 3. **配置读取**：✅ tradingagents 通过环境变量正确读取配置
-4. **配置生效**：✅ 所有 TradingAgents 模块都能使用最新配置
+4. **配置生效**：✅ 所有 StockAgent 模块都能使用最新配置
 
 ### 🔑 关键要点
 

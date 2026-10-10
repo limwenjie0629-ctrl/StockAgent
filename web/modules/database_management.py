@@ -28,7 +28,7 @@ except ImportError as e:
 
 def main():
     st.set_page_config(
-        page_title="数据库管理 - TradingAgents",
+        page_title="数据库管理 - StockAgent",
         page_icon="🗄️",
         layout="wide"
     )
@@ -290,7 +290,7 @@ def main():
     st.markdown("""
     <div style='text-align: center; color: #666; font-size: 0.9em;'>
         🗄️ 数据库缓存管理系统 | TradingAgents v0.1.2 | 
-        <a href='https://github.com/your-repo/TradingAgents' target='_blank'>GitHub</a>
+        <a href='https://github.com/your-repo/StockAgent' target='_blank'>GitHub</a>
     </div>
     """, unsafe_allow_html=True)
 

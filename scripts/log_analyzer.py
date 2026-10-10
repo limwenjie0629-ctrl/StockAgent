@@ -305,7 +305,7 @@ class LogAnalyzer:
         usage = self.analyze_usage()
         
         report = f"""
-# TradingAgents-CN 日志分析报告
+# StockAgent 日志分析报告
 
 生成时间: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}
 日志文件: {self.log_file}
@@ -342,7 +342,7 @@ class LogAnalyzer:
 
 
 def main():
-    parser = argparse.ArgumentParser(description='TradingAgents-CN 日志分析工具')
+    parser = argparse.ArgumentParser(description='StockAgent 日志分析工具')
     parser.add_argument('log_file', help='日志文件路径')
     parser.add_argument('--output', '-o', help='输出报告文件路径')
     parser.add_argument('--format', choices=['text', 'json'], default='text', help='输出格式')
